@@ -36,7 +36,7 @@ export default function Index() {
           maxWidth="700px"
         >
           <Heading mb={2}>Hi, I'm Abdul-Samad Olagunju</Heading>
-          <Text color={colorSecondary[colorMode]}> Hey, I am Neuroscience student at the University of Alberta. I enjoy working with Nextjs and crafting beautiful front-end experiences. This portfolio is built with Nextjs and with Benjamin Carlson personal website tutorial. It allows you to write Markdown and focus on the content of your portfolio.</Text>
+          <Text color={colorSecondary[colorMode]}> Hey, I am Neuroscience student at the University of Alberta. I enjoy working with Nextjs and crafting beautiful front-end experiences. This portfolio is built with Nextjs and with Benjamin Carlson's personal website tutorial. It allows you to write Markdown and focus on the content of your portfolio.</Text>
         </Flex>
       </Stack>
     </Container>
