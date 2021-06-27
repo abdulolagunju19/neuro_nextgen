@@ -59,7 +59,7 @@ const Container = ({ children }) => {
                             Home
                         </Button>
                     </NextLink>
-                    <NextLink href="../pages/stat_tutorial.mdx" passHref>
+                    <NextLink href="/" passHref>
                         <Button as="a" variant="ghost" p={[1, 2, 4]} _hover={{ backgroundColor: navHoverBg[colorMode] }}>
                             Simplistic Statistics
                         </Button>
