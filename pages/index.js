@@ -18,7 +18,7 @@ export default function Index() {
   return (
     <Container>
       <Head>
-        <title>Home - Benjamin Carlson</title>
+        <title>Home - Abdul-Samad Olagunju</title>
       </Head>
       <Stack
         as="main"
@@ -35,8 +35,8 @@ export default function Index() {
           alignItems="flex-start"
           maxWidth="700px"
         >
-          <Heading mb={2}>Hi, I'm Benjamin Carlson</Heading>
-          <Text color={colorSecondary[colorMode]}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante nunc, finibus sit amet purus quis, congue vulputate ipsum. Phasellus lobortis bibendum orci, quis imperdiet lectus imperdiet porttitor.</Text>
+          <Heading mb={2}>Hi, I'm Abdul-Samad Olagunju</Heading>
+          <Text color={colorSecondary[colorMode]}> Hey, I am Neuroscience student at the University of Alberta. I enjoy working with Nextjs and crafting beautiful front-end experiences. This portfolio is built with Nextjs and with Benjamin Carlson personal website tutorial. It allows you to write Markdown and focus on the content of your portfolio.</Text>
         </Flex>
       </Stack>
     </Container>
