@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import {
   useColorMode,
   Heading,
@@ -41,13 +40,5 @@ export default function Index() {
         </Flex>
       </Stack>
     </Container>
-    <Image
-        src="/images/dancing.gif"
-        alt="Photo"
-        width={1125}
-        height={750}
-        priority
-        className="next-image"
-    />
   )
 }
