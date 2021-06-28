@@ -13,14 +13,14 @@ import { useRouter } from 'next/router'
 
 import Container from '../components/Container'
 
-export default function BlogLayout({ children, frontMatter }) {
+export default function SimpleStatsLayout({ children, frontMatter }) {
     const { colorMode } = useColorMode()
     const textColor = {
         light: 'gray.700',
         dark: 'gray.400'
     }
     const router = useRouter()
-    const slug = router.asPath.replace('/blog', '')
+    const slug = router.asPath.replace('/simplestats', '')
     return (
         <Container>
             <Head>
