@@ -20,11 +20,11 @@ export default function SimpleStatsLayout({ children, frontMatter }) {
         dark: 'gray.400'
     }
     const router = useRouter()
-    const slug = router.asPath.replace('/simplestats', '')
+    const slug2 = router.asPath.replace('/simplestats', '')
     return (
         <Container>
             <Head>
-                <title>${slug} - Simplistic Statistics - Abdul-Samad Olagunju</title>
+                <title>${slug2} - Simplistic Statistics - Abdul-Samad Olagunju</title>
             </Head>
             <Stack
                 as="article"
