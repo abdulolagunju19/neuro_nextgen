@@ -1,14 +1,14 @@
 import hydrate from 'next-mdx-remote/hydrate'
 import { getFiles, getFileBySlug } from '../../lib/mdx'
-import BlogLayout from '../../layouts/blog'
+import SimpleStatsLayout from '../../layouts/simplestats'
 import MDXComponents from '../../components/MDXComponents'
 
-export default function Blog({ mdxSource, frontMatter }) {
+export default function SimpleStats({ mdxSource, frontMatter }) {
     const content = hydrate(mdxSource, {
         components: MDXComponents
     })
 
-    return <BlogLayout frontMatter={frontMatter}>{content}</BlogLayout>
+    return <SimpleStatsLayout frontMatter={frontMatter}>{content}</SimpleStatsLayout>
 }
 
 export async function getStaticPaths() {
@@ -17,7 +17,7 @@ export async function getStaticPaths() {
     return {
         paths: posts.map((p) => ({
             params: {
-                slug: p.replace(/\.mdx/, '')
+                slug2: p.replace(/\.mdx/, '')
             }
         })),
         fallback: false
@@ -25,7 +25,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-    const post = await getFileBySlug('simplestats', params.slug)
+    const post = await getFileBySlug('simplestats', params.slug2)
 
     return { props: post }
 }
