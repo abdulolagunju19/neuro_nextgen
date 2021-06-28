@@ -11,7 +11,7 @@ import {
 
 import Container from '../components/Container'
 import { getAllFilesFrontMatter } from '../lib/mdx'
-import BlogPost from '../components/SimpleStatsPost'
+import SimpleStatsPost from '../components/SimpleStatsPost'
 
 import { SearchIcon } from '@chakra-ui/icons'
 
@@ -60,7 +60,7 @@ export default function SimpleStats({ posts }) {
                             </InputRightElement>
                         </InputGroup>
                         {!filteredBlogPosts.length && 'No posts found :('}
-                        {filteredBlogPosts.map((frontMatter) => <BlogPost key={frontMatter.title} {...frontMatter} />)}
+                        {filteredBlogPosts.map((frontMatter) => <SimpleStatsPost key={frontMatter.title} {...frontMatter} />)}
                     </Flex>
                 </Stack>
             </Container>
