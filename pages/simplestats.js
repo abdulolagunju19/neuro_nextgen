@@ -70,5 +70,6 @@ export default function SimpleStats({ posts }) {
 
 export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter('simplestats')
+  
   return { props: { posts } }
 }
