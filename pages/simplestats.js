@@ -1,4 +1,3 @@
-  
 import React, { useState } from 'react'
 import Head from 'next/head'
 import {
@@ -11,25 +10,12 @@ import {
 } from '@chakra-ui/react'
 
 import Container from '../components/Container'
-import { getAllFilesFrontMatter } from '../lib/mdx'
-import BlogPost from '../components/BlogPost'
 
-import { SearchIcon } from '@chakra-ui/icons'
-
-export default function Simplestat({ posts }) {
-    const [searchValue, setSearchValue] = useState('')
-
-    const filteredBlogPosts = posts
-        .sort(
-            (a, b) => Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt))
-        )
-        .filter((frontMatter) =>
-            frontMatter.title.toLowerCase().includes(searchValue.toLowerCase()))
-
-    return (
+export default function SimpleStats({ posts }) {
+  return (
         <>
             <Head>
-                <title>Simplistic Statistics</title>
+                <title>Simplistic Statistics - Abdul-Samad Olagunju</title>
             </Head>
             <Container>
                 <Stack
@@ -48,7 +34,7 @@ export default function Simplestat({ posts }) {
                         px={4}
                     >
                         <Heading letterSpacing="tight" mb={4} as="h1" size="2xl">
-                            Simplistics Statistics ({posts.length} posts)
+                            Simplistic Statistics for Scientists ({posts.length} posts)
                         </Heading>
                         <InputGroup mb={4} mr={4} w="100%">
                             <Input
@@ -70,7 +56,6 @@ export default function Simplestat({ posts }) {
 }
 
 export async function getStaticProps() {
-    const posts = await getAllFilesFrontMatter('simplestat')
-
-    return { props: { posts } }
+  //Todo fetch blog posts
+  return { props: { posts } }
 }
