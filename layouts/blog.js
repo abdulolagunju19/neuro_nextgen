@@ -24,7 +24,7 @@ export default function BlogLayout({ children, frontMatter }) {
     return (
         <Container>
             <Head>
-                <title>${slug} - Blog - Abdul-Samad Olagunju</title>
+                <title>${slug} - Blog - AbdulSamad Olagunju</title>
             </Head>
             <Stack
                 as="article"
@@ -57,13 +57,13 @@ export default function BlogLayout({ children, frontMatter }) {
                         <Flex align="center">
                             <Avatar
                                 size="xs"
-                                name="Abdul-Samad Olagunju"
-                                src="../images/portrait.jpg"
+                                name="AbdulSamad Olagunju"
+                                src="../images/portrait.jpeg"
                                 mr={2}
                             />
                             <Text fontSize="sm" color={textColor[colorMode]}>
                                 {frontMatter.by}
-                                {'Abdul-Samad Olagunju / '}
+                                {'AbdulSamad Olagunju / '}
                                 {format(parseISO(frontMatter.publishedAt), 'MMMM dd, yyyy')}
                             </Text>
                         </Flex>
@@ -77,4 +77,3 @@ export default function BlogLayout({ children, frontMatter }) {
         </Container>
     )
 }
-
