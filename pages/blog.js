@@ -28,7 +28,7 @@ export default function Blog({ posts }) {
     return (
         <>
             <Head>
-                <title>Blog! - Abdul-Samad Olagunju</title>
+                <title>Blog - Abdul-Samad Olagunju</title>
             </Head>
             <Container>
                 <Stack
