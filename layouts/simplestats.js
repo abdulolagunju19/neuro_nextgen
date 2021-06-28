@@ -20,11 +20,11 @@ export default function SimpleStatsLayout({ children, frontMatter }) {
         dark: 'gray.400'
     }
     const router = useRouter()
-    const slug2 = router.asPath.replace('/simplestats', '')
+    const slug = router.asPath.replace('/simplestats', '')
     return (
         <Container>
             <Head>
-                <title>${slug2} - Simplistic Statistics - Abdul-Samad Olagunju</title>
+                <title>${slug} - Simplistic Statistics - AbdulSamad Olagunju</title>
             </Head>
             <Stack
                 as="article"
@@ -57,13 +57,13 @@ export default function SimpleStatsLayout({ children, frontMatter }) {
                         <Flex align="center">
                             <Avatar
                                 size="xs"
-                                name="Abdul-Samad Olagunju"
-                                src="../images/portrait.jpg"
+                                name="AbdulSamad Olagunju"
+                                src="../images/portrait.jpeg"
                                 mr={2}
                             />
                             <Text fontSize="sm" color={textColor[colorMode]}>
                                 {frontMatter.by}
-                                {'Abdul-Samad Olagunju / '}
+                                {'AbdulSamad Olagunju / '}
                                 {format(parseISO(frontMatter.publishedAt), 'MMMM dd, yyyy')}
                             </Text>
                         </Flex>
@@ -77,5 +77,3 @@ export default function SimpleStatsLayout({ children, frontMatter }) {
         </Container>
     )
 }
-
-
