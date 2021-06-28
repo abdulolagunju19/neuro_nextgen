@@ -10,6 +10,11 @@ import {
 } from '@chakra-ui/react'
 
 import Container from '../components/Container'
+import { getAllFilesFrontMatter } from '../lib/mdx'
+
+import SimpleStatsPost from '../components/SimpleStatsPost'
+
+import { SearchIcon } from '@chakra-ui/icons'
 
 export default function SimpleStats({ posts }) {
   return (
@@ -47,7 +52,7 @@ export default function SimpleStats({ posts }) {
                             </InputRightElement>
                         </InputGroup>
                         {!filteredBlogPosts.length && 'No posts found :('}
-                        {filteredBlogPosts.map((frontMatter) => <BlogPost key={frontMatter.title} {...frontMatter} />)}
+                        {filteredBlogPosts.map((frontMatter) => <SimpleStatsPost key={frontMatter.title} {...frontMatter} />)}
                     </Flex>
                 </Stack>
             </Container>
@@ -56,6 +61,6 @@ export default function SimpleStats({ posts }) {
 }
 
 export async function getStaticProps() {
-  //Todo fetch blog posts
+  const posts = await getAllFilesFrontMatter('simplestats')
   return { props: { posts } }
 }
