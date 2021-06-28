@@ -17,7 +17,7 @@ export async function getStaticPaths() {
     return {
         paths: posts.map((p) => ({
             params: {
-                slug2.toString(): p.replace(/\.mdx/, '')
+                slug: p.replace(/\.mdx/, '')
             }
         })),
         fallback: false
@@ -25,7 +25,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-    const post = await getFileBySlug('simplestats', params.slug2)
+    const post = await getFileBySlug('simplestats', params.slug)
 
     return { props: post }
 }
