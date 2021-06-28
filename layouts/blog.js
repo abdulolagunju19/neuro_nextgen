@@ -58,7 +58,7 @@ export default function BlogLayout({ children, frontMatter }) {
                             <Avatar
                                 size="xs"
                                 name="Abdul-Samad Olagunju"
-                                src="../images/portrait.jpeg"
+                                src="../images/portrait.jpg"
                                 mr={2}
                             />
                             <Text fontSize="sm" color={textColor[colorMode]}>
