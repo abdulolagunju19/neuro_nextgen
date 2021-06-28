@@ -11,8 +11,7 @@ import {
 
 import Container from '../components/Container'
 import { getAllFilesFrontMatter } from '../lib/mdx'
-
-import SimpleStatsPost from '../components/SimpleStatsPost'
+import BlogPost from '../components/SimpleStatsPost'
 
 import { SearchIcon } from '@chakra-ui/icons'
 
@@ -25,7 +24,8 @@ export default function SimpleStats({ posts }) {
         )
         .filter((frontMatter) =>
             frontMatter.title.toLowerCase().includes(searchValue.toLowerCase()))
-  return (
+
+    return (
         <>
             <Head>
                 <title>Simplistic Statistics - Abdul-Samad Olagunju</title>
@@ -47,7 +47,7 @@ export default function SimpleStats({ posts }) {
                         px={4}
                     >
                         <Heading letterSpacing="tight" mb={4} as="h1" size="2xl">
-                            Simplistic Statistics for Scientists ({posts.length} posts)
+                            Simplistic Statistics ({posts.length} posts)
                         </Heading>
                         <InputGroup mb={4} mr={4} w="100%">
                             <Input
@@ -60,7 +60,7 @@ export default function SimpleStats({ posts }) {
                             </InputRightElement>
                         </InputGroup>
                         {!filteredBlogPosts.length && 'No posts found :('}
-                        {filteredBlogPosts.map((frontMatter) => <SimpleStatsPost key={frontMatter.title} {...frontMatter} />)}
+                        {filteredBlogPosts.map((frontMatter) => <BlogPost key={frontMatter.title} {...frontMatter} />)}
                     </Flex>
                 </Stack>
             </Container>
@@ -69,7 +69,7 @@ export default function SimpleStats({ posts }) {
 }
 
 export async function getStaticProps() {
-  const posts = await getAllFilesFrontMatter('simplestats')
-  
-  return { props: { posts } }
+    const posts = await getAllFilesFrontMatter('simplestats')
+
+    return { props: { posts } }
 }
