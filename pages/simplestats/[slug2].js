@@ -17,7 +17,7 @@ export async function getStaticPaths() {
     return {
         paths: posts.map((p) => ({
             params: {
-                slug2: p.replace(/\.mdx/, '')
+                slug2.toString(): p.replace(/\.mdx/, '')
             }
         })),
         fallback: false
