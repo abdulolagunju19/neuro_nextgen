@@ -59,7 +59,7 @@ const Container = ({ children }) => {
                             Home
                         </Button>
                     </NextLink>
-                    <NextLink href="/" passHref>
+                    <NextLink href="/simplestats" passHref>
                         <Button as="a" variant="ghost" p={[1, 2, 4]} _hover={{ backgroundColor: navHoverBg[colorMode] }}>
                             Simplistic Statistics
                         </Button>
