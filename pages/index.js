@@ -41,14 +41,12 @@ export default function Index() {
           <br />
           <br />
           <Image
-            src="/images/dancing.gif"
+            src="/images/westbrook.gif"
             alt="Photo"
-            width={300}
-            height={170}
+            width={900}
+            height={900}
             priority
             className="next-image"
-            object-fit: cover;
-            object-position: center;
           />
           <br />
         </Flex>
