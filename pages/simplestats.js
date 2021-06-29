@@ -47,7 +47,7 @@ export default function SimpleStats({ posts }) {
                         px={4}
                     >
                         <Heading letterSpacing="tight" mb={4} as="h1" size="2xl">
-                            Simplistic Statistics Tutorials ({posts.length} posts)
+                            Statistics Tutorials ({posts.length} posts)
                         </Heading>
                         <InputGroup mb={4} mr={4} w="100%">
                             <Input
