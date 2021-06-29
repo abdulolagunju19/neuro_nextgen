@@ -47,6 +47,8 @@ export default function Index() {
             height={170}
             priority
             className="next-image"
+            object-fit: cover;
+            object-position: center;
           />
           <br />
         </Flex>
