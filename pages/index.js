@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Image from 'next/image'
 import {
   useColorMode,
   Heading,
@@ -37,6 +38,15 @@ export default function Index() {
         >
           <Heading mb={2}>Hi, I'm Abdul-Samad Olagunju</Heading>
           <Text color={colorSecondary[colorMode]}> Hey, I am Neuroscience student at the University of Alberta. I enjoy working with Nextjs and crafting beautiful front-end experiences. This portfolio is built with Nextjs. I also thank Benjamin Carlson for his personal website tutorial and Michael Hall for inspiring me to make this website. </Text>
+          <Image
+            src="/images/dancing.gif"
+            alt="Photo"
+            width={1125}
+            height={750}
+            priority
+            className="next-image"
+          />
+          <br />
         </Flex>
       </Stack>
     </Container>
