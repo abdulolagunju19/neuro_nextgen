@@ -3,7 +3,7 @@ import { getFiles, getFileBySlug } from '../../lib/mdx'
 import BlogLayout from '../../layouts/blog'
 import MDXComponents from '../../components/MDXComponents'
 
-export default function = Blog({ mdxSource, frontMatter }) {
+export default function Blog({ mdxSource, frontMatter }) {
     const content = hydrate(mdxSource, {
         components: MDXComponents
     })
