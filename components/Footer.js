@@ -1,4 +1,11 @@
 import Link from 'next/link';
+import {
+  useColorMode,
+  Heading,
+  Text,
+  Flex,
+  Stack
+} from '@chakra-ui/react'
 
 const ExternalLink = ({ href, children }) => (
   <a
@@ -13,7 +20,15 @@ const ExternalLink = ({ href, children }) => (
 
 export default function Footer() {
   return (
-    <footer>
+    <footer
+        as="main"
+        spacing={8}
+        justifyContent="center"
+        alignItems="flex-start"
+        m="0 auto 4rem auto"
+        maxWidth="700px"
+        px={2}
+    >
       <hr/>
       <div>
         <div>
