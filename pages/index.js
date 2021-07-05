@@ -67,9 +67,9 @@ export default function Index() {
                 <Link href="/">
                   <a className="text-gray-500 hover:text-gray-600 transition">Home</a>
                 </Link>
-                <Link href="/">
+                <Link href="/simplestats">
                   <a className="text-gray-500 hover:text-gray-600 transition">
-                    About
+                    Simplistic Statistics
                   </a>
                 </Link>
                 <Link href="/">
@@ -82,30 +82,8 @@ export default function Index() {
                 <ExternalLink href="https://twitter.com/leeerob">
                   Twitter
                 </ExternalLink>
-                <ExternalLink href="https://github.com/leerob">GitHub</ExternalLink>
-                <ExternalLink href="https://www.youtube.com/channel/UCZMli3czZnd1uoc1ShTouQw">
-                  YouTube
+                <ExternalLink href="https://github.com/abdulolagunju19">GitHub</ExternalLink>
                 </ExternalLink>
-              </div>
-              <div className="flex flex-col space-y-4">
-                <Link href="/">
-                  <a className="text-gray-500 hover:text-gray-600 transition">Uses</a>
-                </Link>
-                <Link href="/">
-                  <a className="text-gray-500 hover:text-gray-600 transition">
-                    Guestbook
-                  </a>
-                </Link>
-                <Link href="/">
-                  <a className="text-gray-500 hover:text-gray-600 transition">
-                    Snippets
-                  </a>
-                </Link>
-                <Link href="/">
-                  <a className="text-gray-500 hover:text-gray-600 transition">
-                    Tweets
-                  </a>
-                </Link>
               </div>
             </div>
           </footer>
