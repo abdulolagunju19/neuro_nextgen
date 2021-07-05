@@ -17,6 +17,16 @@ export default function Index() {
     light: 'gray.700',
     dark: 'gray.400'
   }
+  const ExternalLink = ({ href, children }) => (
+  <a
+    className="text-gray-500 hover:text-gray-600 transition"
+    target="_blank"
+    rel="noopener noreferrer"
+    href={href}
+  >
+    {children}
+  </a>
+);
   return (
     <Container>
       <Head>
