@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from '@/components/Footer';
 import {
     useColorMode,
     Button,
@@ -87,6 +88,7 @@ const Container = ({ children }) => {
                 mt={[4, 8, 8]}
             >
                 {children}
+                <Footer />
             </Flex>
         </>
     )
