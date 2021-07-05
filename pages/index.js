@@ -17,16 +17,6 @@ export default function Index() {
     light: 'gray.700',
     dark: 'gray.400'
   }
-  const ExternalLink = ({ href, children }) => (
-  <a
-    className="text-gray-500 hover:text-gray-600 transition"
-    target="_blank"
-    rel="noopener noreferrer"
-    href={href}
-  >
-    {children}
-  </a>
-);
   return (
     <Container>
       <Head>
@@ -72,13 +62,6 @@ export default function Index() {
                     Simplistic Statistics
                   </a>
                 </Link>
-                <Link href="/">
-                  <a className="text-gray-500 hover:text-gray-600 transition">
-                    Newsletter
-                  </a>
-                </Link>
-                <ExternalLink href="https://github.com/abdulolagunju19">GitHub</ExternalLink>
-                </ExternalLink>
               </div>
             </div>
           </footer>
