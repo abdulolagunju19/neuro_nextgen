@@ -58,12 +58,12 @@ export default function Index() {
                 <Link href="/">
                   <a className="text-gray-500 hover:text-gray-600 transition">Home</a>
                 </Link>
-                <Link href="/about">
+                <Link href="/">
                   <a className="text-gray-500 hover:text-gray-600 transition">
                     About
                   </a>
                 </Link>
-                <Link href="/newsletter">
+                <Link href="/">
                   <a className="text-gray-500 hover:text-gray-600 transition">
                     Newsletter
                   </a>
@@ -79,20 +79,20 @@ export default function Index() {
                 </ExternalLink>
               </div>
               <div className="flex flex-col space-y-4">
-                <Link href="/uses">
+                <Link href="/">
                   <a className="text-gray-500 hover:text-gray-600 transition">Uses</a>
                 </Link>
-                <Link href="/guestbook">
+                <Link href="/">
                   <a className="text-gray-500 hover:text-gray-600 transition">
                     Guestbook
                   </a>
                 </Link>
-                <Link href="/snippets">
+                <Link href="/">
                   <a className="text-gray-500 hover:text-gray-600 transition">
                     Snippets
                   </a>
                 </Link>
-                <Link href="/tweets">
+                <Link href="/">
                   <a className="text-gray-500 hover:text-gray-600 transition">
                     Tweets
                   </a>
