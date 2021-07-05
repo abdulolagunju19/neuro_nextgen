@@ -30,8 +30,6 @@ export default function Footer() {
               Newsletter
             </a>
           </Link>
-        </div>
-        <div className="flex flex-col space-y-4">
           <ExternalLink href="https://twitter.com">
             Twitter
           </ExternalLink>
