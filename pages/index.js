@@ -55,16 +55,21 @@ export default function Index() {
             <div className="w-full max-w-2xl grid grid-cols-1 gap-4 pb-16 sm:grid-cols-3">
               <div className="flex flex-col space-y-4">
                 <Link href="/">
-                  <a className="text-gray-500 hover:text-gray-600 transition">                Home                </a>
+                  <a className="text-gray-500 hover:text-gray-600 transition">Home</a>
                 </Link>
                 <Link href="/simplestats">
                   <a className="text-gray-500 hover:text-gray-600 transition">
-                    Simplistic Statistics                
+                    Simplistic Statistics
                   </a>
                 </Link>
                 <Link href="/blog">
                   <a className="text-gray-500 hover:text-gray-600 transition">
-                    Blog                
+                    Blog
+                  </a>
+                </Link>
+                <Link href="/https://github.com/abdulolagunju19">
+                  <a className="text-gray-500 hover:text-gray-600 transition">
+                    Github
                   </a>
                 </Link>
               </div>
