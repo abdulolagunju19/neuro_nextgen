@@ -71,6 +71,7 @@ export default function Index() {
               <ExternalLink href="https://github.com/abdulolagunju19">GitHub</ExternalLink>
               </ExternalLink>
             </div>
+            </div>
           </div>
         </footer>
         </Flex>
