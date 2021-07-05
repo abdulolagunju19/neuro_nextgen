@@ -77,11 +77,6 @@ export default function Index() {
                     Newsletter
                   </a>
                 </Link>
-              </div>
-              <div className="flex flex-col space-y-4">
-                <ExternalLink href="https://twitter.com/leeerob">
-                  Twitter
-                </ExternalLink>
                 <ExternalLink href="https://github.com/abdulolagunju19">GitHub</ExternalLink>
                 </ExternalLink>
               </div>
