@@ -1,6 +1,7 @@
 import React from 'react'
 import NextLink from 'next/link'
 import { Flex, Link, IconButton, useColorMode } from '@chakra-ui/react'
+import { Divider } from "@chakra-ui/react"
 
 
 export const Footer = () => {
@@ -16,7 +17,7 @@ export const Footer = () => {
     }
     return (
         <Flex align="center" mb={4} direction="column" visibility={'hidden', 'visible', 'visible'} display={['none', 'flex', 'flex']}>
-            <hr className="w-full border-1 border-gray-200 dark:border-gray-800 mb-8" />
+            <Divider orientation="horizontal" />
             <div>
                 <NextLink href="/blog" passHref>
                     <Link
@@ -26,7 +27,7 @@ export const Footer = () => {
                         mr={2}
                         title="Blog"
                     >
-                       My Blog_ 
+                       My Blog 
                     </Link>
                 </NextLink>
                 <NextLink href="/simplestats" passHref>
@@ -37,7 +38,7 @@ export const Footer = () => {
                         mr={2}
                         title="Simplistic Statistics"
                     >
-                         |Tutorials_
+                         |Tutorials|
                     </Link>
                 </NextLink>
                 <NextLink href="/contactme" passHref>
@@ -48,7 +49,7 @@ export const Footer = () => {
                         mr={2}
                         title="Contact Me"
                     >
-                        |Contact Me
+                        Contact Me
                     </Link>
                 </NextLink>
             </div>
