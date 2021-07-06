@@ -44,8 +44,8 @@ export default function ContactMe() {
             src="/images/happy.gif"
             alt="Photo"
             justifyContent="center"
-            width={500}
-            height={500}
+            width={750}
+            height={750}
             priority
             className="next-image"
           />
