@@ -37,7 +37,7 @@ export default function ContactMe() {
           maxWidth="700px"
         >
           <Heading mb={2}>Want to connect further?</Heading>
-          <Text color={colorSecondary[colorMode]}> You can reach me at this email address: abdulolagunju19@gmail.com </Text>
+          <Text color={colorSecondary[colorMode]}> You can reach me at this email address: olagunju@ualberta.ca </Text>
           <br />
           <br />
           <Image
@@ -49,7 +49,6 @@ export default function ContactMe() {
             priority
             className="next-image"
           />
-          <br />
         </Flex>
       </Stack>
     </Container>
