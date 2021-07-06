@@ -16,12 +16,7 @@ export const Footer = () => {
     }
     return (
         <Flex align="center" mb={4} direction="column" visibility={'hidden', 'visible', 'visible'} display={['none', 'flex', 'flex']}>
-            <div>
-                <Link href="https://github.com/abdulolagunju19" title="GitHub" isExternal>
-                </Link>
-                <Link href="mailto:abdulolagunju19@gmail.com" title="Email" isExternal>
-                </Link>
-            </div>
+            <hr/>
             <div>
                 <NextLink href="/blog" passHref>
                     <Link
