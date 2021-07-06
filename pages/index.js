@@ -49,7 +49,6 @@ export default function Index() {
             priority
             className="next-image"
           />
-          <br />
         </Flex>
       </Stack>
     </Container>
