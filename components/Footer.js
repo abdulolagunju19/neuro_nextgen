@@ -26,7 +26,7 @@ export const Footer = () => {
                         mr={2}
                         title="Blog"
                     >
-                       My Blog
+                       My Blog_ 
                     </Link>
                 </NextLink>
                 <NextLink href="/simplestats" passHref>
@@ -37,7 +37,7 @@ export const Footer = () => {
                         mr={2}
                         title="Simplistic Statistics"
                     >
-                         | Tutorials
+                         |Tutorials_
                     </Link>
                 </NextLink>
                 <NextLink href="/contactme" passHref>
@@ -48,7 +48,7 @@ export const Footer = () => {
                         mr={2}
                         title="Contact Me"
                     >
-                        | Contact Me
+                        |Contact Me
                     </Link>
                 </NextLink>
             </div>
