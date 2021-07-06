@@ -43,6 +43,7 @@ export default function ContactMe() {
           <Image
             src="/images/happy.gif"
             alt="Photo"
+            justifyContent="center"
             width={700}
             height={700}
             priority
