@@ -31,7 +31,7 @@ export const Footer = () => {
                         mr={2}
                         title="Blog"
                     >
-                        /hello
+                        Blog
                     </Link>
                 </NextLink>
                 <NextLink href="/simplestats" passHref>
@@ -42,7 +42,7 @@ export const Footer = () => {
                         mr={2}
                         title="Simplistic Statistics"
                     >
-                        /videos
+                        Stats Tutorials
                     </Link>
                 </NextLink>
                 <NextLink href="/contactme" passHref>
@@ -53,7 +53,7 @@ export const Footer = () => {
                         mr={2}
                         title="Contact Me"
                     >
-                        /videos
+                        Contact Me
                     </Link>
                 </NextLink>
             </div>
