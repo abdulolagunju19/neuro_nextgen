@@ -11,8 +11,8 @@ Let's take a look at a kaggle dataset about medical insurance. This will be a br
 So, I like to use spyder to perform my analyses. To download spyder, I just downloaded anaconda. This video explains it pretty well for windows 10 users: 
 [Link](https://youtu.be/5mDYijMfSzs) 
 
-Let's begin!
-![Image](/images/begin.gif) 
+### Let's begin!
+![Image](/images/begin.gif)
 
 So, the first thing I like to do is download the dataset I would like to look into. For now, I mainly use csv files. To easily use them in my code, I created a repository in my Github account that contains the csv files I downloaded from kaggle. 
 
@@ -20,12 +20,14 @@ To create a repository on github, first you must create an account on github. It
 
 Now, look through kaggle and download the dataset you like. Unfortunately, Github only takes csv files that are less than 25mb.
 
-Here is the link to the dataset I used: [medical insurance](https://www.kaggle.com/mirichoi0218/insurance)
+Here is the link to the dataset I used: [Medical Insurance Kaggle Dataset](https://www.kaggle.com/mirichoi0218/insurance)
 
 Now that you have spyder and the csv file you need in you repository, click on the csv file on github. Then, click raw. Copy the URL, and we are ready to get to work.
-This video explains getting the kaggle url: [Link](https://youtu.be/jDaWna1IRmY)
+This video explains getting the kaggle url: [Create URL LINK for your DATA from CSV files](https://youtu.be/jDaWna1IRmY)
 
+So, I will briefly explain the methodology I will use when analyzing this code. I will firstly use a python method to describe the variables and their means, standard deviations, etc. Then I will use graphs such as histograms, bar plots and correlation matrices to see what the data reveals. 
 
+Here is the all of the code.
 ```python:insurance.py
 import pandas as pd
 import matplotlib.pyplot as plt
