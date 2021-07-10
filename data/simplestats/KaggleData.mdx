@@ -29,6 +29,7 @@ So, I will briefly explain the methodology I will use when analyzing this code. 
 
 Here is the all of the code.
 ```python:insurance.py
+#import libraries needed
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -67,9 +68,14 @@ for variable in ['sex', 'children', 'smoker', 'region']:
     #the random.randint is generating colours for our plots, use count plot
     fig = sns.catplot(x=variable,data=df,kind="count",palette="Set"+
                       str(random.randint(1,3)),height=2.5,aspect=2, ci ="sd")
+#lets make a pairplot to get some idea of what's going on in the data
+plt.figure()
+#positive correlation between charges and age? what are these insurance companies doing
+sns.pairplot(df) 
 
 plt.figure()
-sns.distplot(df["age"]) #why are insurance companies dealing mainly with young people?
+#why are insurance companies dealing mainly with young people?
+sns.distplot(df["age"]) 
 
 plt.figure()
 sns.distplot(df["bmi"]) #nice normal distribution
@@ -79,7 +85,8 @@ sns.distplot(df["charges"])
 
 #lets take a look at the heatmap
 plt.figure()
-sns.heatmap(df.corr(), annot=True, linewidths=.5, fmt= '.1f') #so charges and age look to be the most correlated
+#so charges and age look to be the most correlated
+sns.heatmap(df.corr(), annot=True, linewidths=.5, fmt= '.1f') 
 
 #let's make a scatter plot to take a closer look at the charges and age relationship
 plt.figure()
@@ -87,9 +94,19 @@ sns.scatterplot(data = df, x = "age", y = "charges", hue = "bmi")
 plt.title('Age and Charges Scatter Plot')   
 
 plt.figure()
-sns.boxplot(x="age", y="charges", data = df) #not a great plot, can't tell what's going on
+#are smokers getting charged more
+sns.boxplot(x="smoker", y="charges", data = df) 
+
+plt.figure()
+#are what region is getting charged the most
+sns.boxplot(x="region", y="charges", data = df) 
 
 #take a deeper look at statistics for each age
+#groupby shows mean of different variables, separating them by age
 print(df.groupby("age").mean())
 ```
+So, with this code you can create histograms, boxplots, scatterplots, clean up your duplicate rows or columns, and describe your dataset pretty adequately.
 
+Enjoy!
+
+![Westbrook](/images/dancing.gif)
