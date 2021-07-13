@@ -38,7 +38,9 @@ import seaborn as sns
 import numpy as np
 from scipy import stats
 import random
-#don't want to see warnings on the console, usually about old functions like distplot
+
+#don't want to see warnings on the console 
+#about older functions like distplot
 import warnings
 warnings.filterwarnings('ignore') 
 
@@ -123,6 +125,8 @@ sns.pairplot(df)
 I wanted to show you the df.groupby operation. I use it to see the mean for different variables (bmi, charges, etc.) for different ages. It is a valuable operation. I also wanted to show you the sort_values operation. I provides the 20 rows of the people who got charged the most. You can use both of these functions to get a better idea of certain subsets of your data.
 
 I want to create lots of count plots(plots that show the number of males vs females, number of people in each region, etc.). I use a for loop. This goes through each the variables sex, children, smoker, and region. It then uses sns.catplot (makes categorical plots) to generate count plots for each variable. I set what I want to go in the x axis, what my dataset is, and I use random.randint to make different colours for the bars. 
+
+sns.pairplots will create a bunch of plots between your different variables.
 
 ```python:insurance.py
 plt.figure()
