@@ -1,6 +1,6 @@
 ---
 title: 'An analysis of a dataset from Kaggle'
-publishedAt: '2021-05-19'
+publishedAt: '2021-07-12'
 summary: 'I provide a tutorial on using python to deal with a dataset from kaggle.'
 ---
 
@@ -25,9 +25,11 @@ Here is the link to the dataset I used: [Medical Insurance Kaggle Dataset](https
 Now that you have spyder and the csv file you need in you repository, click on the csv file on github. Then, click raw. Copy the URL, and we are ready to get to work.
 This video explains getting the kaggle url: [Create URL LINK for your DATA from CSV files](https://youtu.be/jDaWna1IRmY)
 
-So, I will briefly explain the methodology I will use when analyzing this code. I will firstly use a python method to describe the variables and their means, standard deviations, etc. Then I will use graphs such as histograms, bar plots and correlation matrices to see what the data reveals. 
+So, I will briefly explain the methodology I will use when analyzing this code. I will firstly use a python method to describe the variables and their means, standard deviations, etc. Then I will use graphs such as histograms, bar plots and correlation matrices to see what the data reveals. For you to learn this easily, you should have spyder open and ready to go on your computer.
 
-Here is the first half of the code of the code.
+Before I start analyzing the code, I need to import the libraries I will use. In programming, you don't reinvent the wheel every time you want to accomplish a task. You use the tools already available, and that is what we will do here. 
+
+Here is the first bit of the code we will analyze.
 ```python:insurance.py
 #import libraries needed
 import pandas as pd
@@ -42,15 +44,24 @@ warnings.filterwarnings('ignore')
 
 #pass in dataframe (df) csv file from github, check out the raw
 df = pd.read_csv(".../csv_files/main/insurance.csv")
+```
+The first line uses commented out code. This is code will not be run by the compiler (this is what is turning what the english we write on the screen into a language the computer understands). It is good to use comments so the people who read your code understand what is going on.
 
-#let's quickly look at a summary of the dataset
-print(df.info())
+The import statements allow me to use code others have already written in my own program. For examply, I use pandas (short form pd in my code) to read the data from the csv file, I use seaborn (short form sns in my code) to generate most of my plots, and stats to do some hypothesis testing. You have the freedom of choosing what libraries you want to use in your code, so feel free to google how you can incorporate them in your code.
 
+I create a variable called df(stands for dataframe), and I read in the csv file containing insurance information from Kaggle.  
+
+Now that I have the data, I need to think about how I will analyze it. Firstly, I want to know the labels of the columns and the rows. I need to have an idea of how many there are, and what they represent. 
+
+```python:insurance.py
 #let's see total number of (rows,columns)
 print(df.shape) #1338 rows, 7 columns
 
 #take a look at columns
 print(df.columns)
+
+#let's quickly look at a summary of the dataset
+print(df.info())
 
 #let's take a quick look at a description of the dataset
 print(df.describe(include="all")) #looks like  there are no missing values
@@ -58,29 +69,62 @@ print(df.describe(include="all")) #looks like  there are no missing values
 #take a look at first 5 rows of data
 print(df.head()) 
 print("\n")
+```
+
+Now, using df.shape, we know there are 1338 rows and 7 columns. df.columns gives us the names of the columns. df.info shows us a table that gives us more detail about the kind of data we have, and df.describe gives us a very detailed table. df.head shows us the first 5 rows of the data.
+
+We know that the data contains information from people about their age, sex, insurance charges, bmi, etc. From this, we can start asking ourselves questions about how we would like to analyze the data. Questions like: Can we see whether people with higher bmi's have a higher insurance charges? Do certain variables like whether or not someone is a smoker have a significant effect on their insurance charges? What kind of bmi makes somebody obese, and what effect does this have on their insurance charge?
+
+**We want to start thinking about these questions before we deal with the data. This will allow us to think about what kind of figures we would like to create from the data.**
+
+```python:insurance.py
+#check for missing data
+print("\nMissing Values: " )
+print(df.isnull().sum()) 
 
 #lets check for duplicate rows
-num_dup_rows = len(df) - len(df.drop_duplicates(keep="first"))
+number_of_dup_rows = len(df) - len(df.drop_duplicates(keep="first"))
 
-if num_dup_rows!= 0:
-    print("Number of duplicate rows found : {}\n\nDuplicates removed!".format(num_dup_rows))
+if (number_of_dup_rows != 0):
+    print("Number of duplicate rows found : {}\n\nDuplicates removed!".format(number_of_dup_rows))
     df.drop_duplicates(keep="first",inplace=True)
 else:
     print("No duplicate entries found!")
+```
 
-#lets make bar plots for the categorical variables
-#for loop looks at sex variable, children variable etc,
-#makes a catplot for each
-for variable in ['sex', 'children', 'smoker', 'region']:
+This code will take a look at whether or not we have any missing values, and whether we have duplicate rows. df.isnull().sum() will show if there are any missing values in any of the columns. 
+
+We then use len(df) to check the difference of the length of the dataframe after we us df.drop_duplicates to remove duplicate rows. Using this, we remove 1 duplicate row.
+
+It is important to clean up your data before you analyze it furthers, and the more complicated it becomes, the more cleanup it will probably require.
+
+In the following section, I will show you how you can create some simple figures to help you with your data analysis. There are many more tools, but I will keep the tools I use for this analysis very simple.
+
+```python:insurance.py
+#take a deeper look at statistics for each age
+#groupby shows mean of different variables, separating them by age
+print(df.groupby("age").mean())
+
+#which 20 people got charged the most?
+print(df.sort_values("charges", ascending = False).head(20))
+
+#let's take a look at the other plots
+#lets make count plots for the categorical variables
+for variable in ['children', 'smoker', 'region', 'sex']:
     #the random.randint is generating colours for our plots, use count plot
     fig = sns.catplot(x=variable,data=df,kind="count",palette="Set"+
-                      str(random.randint(1,3)),height=2.5,aspect=2, ci ="sd")
+                      str(random.randint(1,3)),height=3.5,aspect=2, ci ="sd")
 #lets make a pairplot to get some idea of what's going on in the data
+#show scatter plots of all variables
 plt.figure()
-#positive correlation between charges and age? 
-#what are these insurance companies doing
+#positive correlation between charges and age? what are these insurance companies doing
 sns.pairplot(df) 
+```
+I wanted to show you the df.groupby operation. I use it to see the mean for different variables (bmi, charges, etc.) for different ages. It is a valuable operation. I also wanted to show you the sort_values operation. I provides the 20 rows of the people who got charged the most. You can use both of these functions to get a better idea of certain subsets of your data.
 
+I want to create lots of count plots(plots that show the number of males vs females, number of people in each region, etc.). I use a for loop. This goes through each the variables sex, children, smoker, and region. It then uses sns.catplot (makes categorical plots) to generate count plots for each variable. I set what I want to go in the x axis, what my dataset is, and I use random.randint to make different colours for the bars. 
+
+```python:insurance.py
 plt.figure()
 #why are insurance companies dealing mainly with young people?
 sns.distplot(df["age"]) 
@@ -96,8 +140,7 @@ plt.figure()
 #so charges and age look to be the most correlated
 sns.heatmap(df.corr(), annot=True, linewidths=.5, fmt= '.1f') 
 
-#let's make a scatter plot to 
-#take a closer look at the charges and age relationship
+#let's make a scatter plot to take a closer look at the charges and age relationship
 plt.figure()
 sns.scatterplot(data = df, x = "age", y = "charges", hue = "bmi")
 plt.title('Age and Charges Scatter Plot')   
@@ -107,19 +150,38 @@ plt.figure()
 sns.boxplot(x="smoker", y="charges", data = df) 
 
 plt.figure()
-#are what region is getting charged the most
+#are what region is getting charged the most, who outliers are
 sns.boxplot(x="region", y="charges", data = df) 
 
-#take a deeper look at statistics for each age
-#groupby shows mean of different variables, separating them by age
-print(df.groupby("age").mean())
-```
-So, with this code you can create histograms, boxplots, scatterplots, clean up your duplicate rows or columns, and describe your dataset pretty adequately.
-To learn more about using a module called seaborn to make plots using python, 
+#lets look at some comparisons using violin plots
 
+#charges for male vs female
+plt.figure()
+sns.violinplot(data=df, x="sex", y="charges")
+
+#charges for smoker vs non smoker
+plt.figure()
+sns.violinplot(data=df, x="smoker", y="charges")
+
+#charges depending on number of kids
+plt.figure()
+sns.violinplot(data=df, x="children", y="charges")
+
+#charges depending on location
+plt.figure()
+sns.violinplot(data=df, x="region", y="charges")
+```
+
+In the code above, I use plt.figure() before each plot so that it opens on a new page on spyder. Otherwise, spyder puts all the plots on top of each other. I use seaborn to plot this data.
+
+To learn more about using a module called seaborn to make plots using python, 
 Check this out: [Seaborn Tutorial](https://www.kaggle.com/kanncaa1/seaborn-tutorial-for-beginners)
 
-Now, let's see if we can perform some statistical tests on the data.
+
+So, with this code you can create histograms, boxplots, scatterplots, clean up your duplicate rows or columns, and describe your dataset pretty adequately.
+
+
+#### Now, let's see if we can perform some statistical tests on the data.
 
 ```python:stats.py
 #import libraries needed
@@ -160,7 +222,9 @@ print(Series_stats('charges','smoker','yes','no'))
 print(Series_stats('bmi','sex','male','female'))
 ```
 You can perform so two-sample t tests with this information.
-I learned how to do this from this kaggle code: [Medical insurance analysis](https://www.kaggle.com/winternguyen/usa-health-insurance-cost-key-factors)
+I learned how to do these analyses from these kaggle pages: 
+1. [Medical insurance analysis](https://www.kaggle.com/winternguyen/usa-health-insurance-cost-key-factors)
+2. [Exploratory Data Analysis](https://www.kaggle.com/nabamitachakraborty/exploratory-data-analysis)
 
 Enjoy!
 
