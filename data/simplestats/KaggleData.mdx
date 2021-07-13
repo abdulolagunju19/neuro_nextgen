@@ -128,6 +128,8 @@ I want to create lots of count plots(plots that show the number of males vs fema
 
 sns.pairplots will create a bunch of plots between your different variables.
 
+These plots are simple to make, and will give you a general idea about your data.
+
 ```python:insurance.py
 plt.figure()
 #why are insurance companies dealing mainly with young people?
@@ -177,6 +179,8 @@ sns.violinplot(data=df, x="region", y="charges")
 ```
 
 In the code above, I use plt.figure() before each plot so that it opens on a new page on spyder. Otherwise, spyder puts all the plots on top of each other. I use seaborn to plot this data.
+
+I show you how to make violin plots, boxplots, scatterplots, and histograms with lines superimposed (distplot). You can play around with the variables so you may can look for any interesting insights in the data. For example, by using sns.boxplot with x = regions, I see that the insurance charges for each region are more or less the same. By using sns.boxplot with x = smoker, I see that the insurance charges are higher for smokers. 
 
 To learn more about using a module called seaborn to make plots using python, 
 Check this out: [Seaborn Tutorial](https://www.kaggle.com/kanncaa1/seaborn-tutorial-for-beginners)
