@@ -205,31 +205,34 @@ from scipy.stats import ttest_ind
 #pass in dataframe (df) csv file from github
 df = pd.read_csv("https://raw.githubusercontent.com/abdulolagunju19/csv_files/main/insurance.csv")
 
+#function to perform t test
 def Series_stats(var, category, prop1, prop2):
-# Step 1: State the null and alternative hypothesis and select a level of significance is 5% or 0.05
-# Step 2: Collect data and calculate the values of test statistic
+# Step 1: State the null and alternative hypothesis and select a alpha level of 0.05
+# Step 2: Calculate t statistic
   s1 = df[(df[category]==prop1)][var]
   s2 = df[(df[category]==prop2)][var]
+#get value of t value
   t, p = ttest_ind(s1,s2,equal_var = False)
 
   print("Two-sample t-test: t={}, p={}".format(round(t,5),p))
-# Step 3: Compare the probability associated with the test statistic with level of significance specified
-  if ((p < 0.05) and (np.abs(t) > 1.96)):
-    print("\n REJECT the Null Hypothesis and state that: \n at 5% significance level, the mean {} of {}-{} and {}-{} are not equal.".format(var, prop1, category, prop2, category))
-    print("\n YES, the {} of {}-{} differ significantly from {}-{} in the current dataset.".format(var, prop1, category, prop2, category))
+# check if p value is less than threshold
+  if ((p < 0.05) & (np.abs(t) > 1.96)):
+    print("\n We reject the Null Hypothesis and state that: \n at a 5% significance level, the mean {} of {}-{} and {}-{} are not equal.".format(var, prop1, category, prop2, category))
+    print("\n Yes, the {} of {}-{} differ significantly from {}-{} in the current dataset.".format(var, prop1, category, prop2, category))
     print("\n The mean value of {} for {}-{} is {} and for {}-{} is {}".format(var, prop1, category, round(s1.mean(),2), prop2, category, round(s2.mean(),2)))
   else:
-    print("\n FAIL to Reject the Null Hypothesis and state that: \n at 5% significance level, the mean {} of {} - {} and {} - {} are equal.".format(var, prop1, category, prop2, category))
+    print("\n We fail to reject the Null Hypothesis and state that: \n at 5% significance level, the mean {} of {} - {} and {} - {} are equal.".format(var, prop1, category, prop2, category))
     print("\n NO, the {} of {}-{} NOT differ significantly from {}-{} in the current dataset".format(var, prop1, category, prop2, category))
     print("\n The mean value of {} for {}-{} is {} and for {}-{} is {}".format(var, prop1, category, round(s1.mean(),2), prop2, category, round(s2.mean(),2)))
 
 #Do charges of people who smoke differ significantly from the people who don't?
 print(Series_stats('charges','smoker','yes','no'))
 
-#Does BMI of males differ significantly from that of females?
+#Does the BMI of males differ significantly from that of females?
 print(Series_stats('bmi','sex','male','female'))
 ```
 You can perform so two-sample t tests with this information.
+
 I learned how to do these analyses from these kaggle pages: 
 1. [Medical insurance analysis](https://www.kaggle.com/winternguyen/usa-health-insurance-cost-key-factors)
 2. [Exploratory Data Analysis](https://www.kaggle.com/nabamitachakraborty/exploratory-data-analysis)
