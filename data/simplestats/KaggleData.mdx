@@ -80,15 +80,15 @@ print(df.describe(include="all"))
 #take a look at first 5 rows of data
 print(df.head()) 
 ```
--Now, using df.shape, we know there are 1338 rows and 7 columns. 
+- Now, using df.shape, we know there are 1338 rows and 7 columns. 
 
--df.columns.tolist() gives us the names of the columns as a list. 
+- df.columns.tolist() gives us the names of the columns as a list. 
 
--df.info shows us a table that gives us more detail about the kind of data we have.
+- df.info shows us a table that gives us more detail about the kind of data we have.
 
--df.nunique() shows the number of unique values for each column. This helps tell us if a column has a categorical or numerical variable (eg. we can see smoker is probably categorical as it has 2 unique values, bmi is numerical as it has 548). 
+- df.nunique() shows the number of unique values for each column. This helps tell us if a column has a categorical or numerical variable (eg. we can see smoker is probably categorical as it has 2 unique values, bmi is numerical as it has 548). 
 
--df.describe gives us a very detailed table about the attributes of our data. df.head shows us the first 5 rows of the data.
+- df.describe gives us a very detailed table about the attributes of our data. df.head shows us the first 5 rows of the data.
 
 We know that the data contains information from people about their age, sex, insurance charges, bmi, etc. From this, we can start asking ourselves questions about how we would like to analyze the data. Questions like: Can we see whether people with higher bmi's have higher insurance charges? Do certain variables like whether or not someone is a smoker have a significant effect on their insurance charges? What kind of bmi makes somebody obese, and what effect does this have on their insurance charge?
 
