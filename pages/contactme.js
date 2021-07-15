@@ -44,8 +44,8 @@ export default function ContactMe() {
             src="/images/EEG_gif.gif"
             alt="Photo"
             justifyContent="center"
-            width={750}
-            height={750}
+            width={700}
+            height={700}
             priority
             className="next-image"
           />
