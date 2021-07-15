@@ -185,53 +185,7 @@ I show you how to make violin plots, boxplots, scatterplots, and histograms with
 To learn more about using a module called seaborn to make plots using python, 
 Check this out: [Seaborn Tutorial](https://www.kaggle.com/kanncaa1/seaborn-tutorial-for-beginners)
 
-
 So, with this code you can create histograms, boxplots, scatterplots, clean up your duplicate rows or columns, and describe your dataset pretty adequately.
-
-
-#### Now, let's see if we can perform some statistical tests on the data.
-
-```python:stats.py
-#import libraries needed
-import pandas as pd
-import numpy as np
-#don't want to see warnings on the console, usually about old functions like distplot
-import warnings
-warnings.filterwarnings('ignore') 
-
-#We have gotten a little intro to the data, lets run some tests
-from scipy.stats import ttest_ind
-
-#pass in dataframe (df) csv file from github
-df = pd.read_csv("https://raw.githubusercontent.com/abdulolagunju19/csv_files/main/insurance.csv")
-
-#function to perform t test
-def Series_stats(var, category, prop1, prop2):
-# Step 1: State the null and alternative hypothesis and select a alpha level of 0.05
-# Step 2: Calculate t statistic
-  s1 = df[(df[category]==prop1)][var]
-  s2 = df[(df[category]==prop2)][var]
-#get value of t value
-  t, p = ttest_ind(s1,s2,equal_var = False)
-
-  print("Two-sample t-test: t={}, p={}".format(round(t,5),p))
-# check if p value is less than threshold
-  if ((p < 0.05) & (np.abs(t) > 1.96)):
-    print("\n We reject the Null Hypothesis and state that: \n at a 5% significance level, the mean {} of {}-{} and {}-{} are not equal.".format(var, prop1, category, prop2, category))
-    print("\n Yes, the {} of {}-{} differ significantly from {}-{} in the current dataset.".format(var, prop1, category, prop2, category))
-    print("\n The mean value of {} for {}-{} is {} and for {}-{} is {}".format(var, prop1, category, round(s1.mean(),2), prop2, category, round(s2.mean(),2)))
-  else:
-    print("\n We fail to reject the Null Hypothesis and state that: \n at 5% significance level, the mean {} of {} - {} and {} - {} are equal.".format(var, prop1, category, prop2, category))
-    print("\n NO, the {} of {}-{} NOT differ significantly from {}-{} in the current dataset".format(var, prop1, category, prop2, category))
-    print("\n The mean value of {} for {}-{} is {} and for {}-{} is {}".format(var, prop1, category, round(s1.mean(),2), prop2, category, round(s2.mean(),2)))
-
-#Do charges of people who smoke differ significantly from the people who don't?
-print(Series_stats('charges','smoker','yes','no'))
-
-#Does the BMI of males differ significantly from that of females?
-print(Series_stats('bmi','sex','male','female'))
-```
-You can perform so two-sample t tests with this information.
 
 I learned how to do these analyses from these kaggle pages: 
 1. [Medical insurance analysis](https://www.kaggle.com/winternguyen/usa-health-insurance-cost-key-factors)
