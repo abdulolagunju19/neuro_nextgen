@@ -41,7 +41,7 @@ export default function ContactMe() {
           <Text color={colorSecondary[colorMode]}> You can reach me at this email address: olagunju@ualberta.ca </Text>
           <br />
           <Image
-            src="/images/happy.gif"
+            src="/images/EEG_gif.gif"
             alt="Photo"
             justifyContent="center"
             width={750}
