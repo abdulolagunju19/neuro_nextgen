@@ -68,6 +68,7 @@ export default function SimpleStats({ posts }) {
                             width={200}
                             height={200}
                             priority
+                            align="center"
                         />
                         <br/>
                         {filteredBlogPosts.map((frontMatter) => <SimpleStatsPost key={frontMatter.title} {...frontMatter} />)}
