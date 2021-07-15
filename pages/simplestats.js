@@ -66,8 +66,8 @@ export default function SimpleStats({ posts }) {
                         <Image
                             src="/images/stat.gif"
                             alt="Photo"
-                            width={750}
-                            height={750}
+                            width={550}
+                            height={550}
                             priority
                             align="center"
                         />
