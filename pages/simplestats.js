@@ -60,15 +60,16 @@ export default function SimpleStats({ posts }) {
                                 <SearchIcon color="gray.300" />
                             </InputRightElement>
                         </InputGroup>
-                        <Image
-                            src="/images/stat.gif"
-                            alt="Photo"
-                            width={500}
-                            height={500}
-                            priority
-                            className="next-image"
-                        />
                         {!filteredBlogPosts.length && 'No posts found :('}
+                        <div className="m-2 w-10 sm:w-20 self-center">
+                            <Image
+                                src="/images/stat.gif"
+                                alt="Photo"
+                                width={500}
+                                height={500}
+                                priority
+                            />
+                        </div>
                         {filteredBlogPosts.map((frontMatter) => <SimpleStatsPost key={frontMatter.title} {...frontMatter} />)}
                     </Flex>
                 </Stack>
