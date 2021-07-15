@@ -50,21 +50,14 @@ export default function SimpleStats({ posts }) {
                         <Heading letterSpacing="tight" mb={4} as="h1" size="2xl">
                             Statistics Tutorials ({posts.length} posts)
                         </Heading>
-                        <div
-                            style={{
-                              display: "flex",
-                              justifyContent: "center",
-                            }}
-                        >
-                            <Image
-                                src="/images/stat.gif"
-                                alt="Photo"
-                                width={500}
-                                height={500}
-                                priority
-                                className="next-image"
-                            />
-                        <div/>
+                        <Image
+                            src="/images/stat.gif"
+                            alt="Photo"
+                            width={500}
+                            height={500}
+                            priority
+                            className="next-image"
+                        />
                         <InputGroup mb={4} mr={4} w="100%">
                             <Input
                                 aria-label="Search by title"
