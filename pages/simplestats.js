@@ -61,7 +61,7 @@ export default function SimpleStats({ posts }) {
                             </InputRightElement>
                         </InputGroup>
                         {!filteredBlogPosts.length && 'No posts found :('}
-                        </br>
+                        <br/>
                         <div 
                             style={{
                             display: "flex",
