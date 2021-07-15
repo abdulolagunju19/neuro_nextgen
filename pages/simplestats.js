@@ -76,7 +76,7 @@ export default function SimpleStats({ posts }) {
                                 priority
                             />
                         </div>
-                        </br>
+                        <br/>
                         {filteredBlogPosts.map((frontMatter) => <SimpleStatsPost key={frontMatter.title} {...frontMatter} />)}
                     </Flex>
                 </Stack>
