@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Image from 'next/image'
 import Head from 'next/head'
 import {
     Heading,
@@ -8,7 +7,7 @@ import {
     Input,
     InputGroup,
     InputRightElement,
-    Center
+    Image
 } from '@chakra-ui/react'
 
 import Container from '../components/Container'
@@ -63,15 +62,13 @@ export default function SimpleStats({ posts }) {
                         </InputGroup>
                         {!filteredBlogPosts.length && 'No posts found :('}
                         <br/>
-                        <Center>
-                            <Image
-                                src="/images/stat.gif"
-                                alt="Photo"
-                                width={500}
-                                height={500}
-                                priority
-                            />
-                        </Center>
+                        <Image
+                            src="/images/stat.gif"
+                            alt="Photo"
+                            width={200}
+                            height={200}
+                            priority
+                        />
                         <br/>
                         {filteredBlogPosts.map((frontMatter) => <SimpleStatsPost key={frontMatter.title} {...frontMatter} />)}
                     </Flex>
