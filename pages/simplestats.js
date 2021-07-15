@@ -50,14 +50,6 @@ export default function SimpleStats({ posts }) {
                         <Heading letterSpacing="tight" mb={4} as="h1" size="2xl">
                             Statistics Tutorials ({posts.length} posts)
                         </Heading>
-                        <Image
-                            src="/images/stat.gif"
-                            alt="Photo"
-                            width={500}
-                            height={500}
-                            priority
-                            className="next-image"
-                        />
                         <InputGroup mb={4} mr={4} w="100%">
                             <Input
                                 aria-label="Search by title"
@@ -68,6 +60,14 @@ export default function SimpleStats({ posts }) {
                                 <SearchIcon color="gray.300" />
                             </InputRightElement>
                         </InputGroup>
+                        <Image
+                            src="/images/stat.gif"
+                            alt="Photo"
+                            width={500}
+                            height={500}
+                            priority
+                            className="next-image"
+                        />
                         {!filteredBlogPosts.length && 'No posts found :('}
                         {filteredBlogPosts.map((frontMatter) => <SimpleStatsPost key={frontMatter.title} {...frontMatter} />)}
                     </Flex>
