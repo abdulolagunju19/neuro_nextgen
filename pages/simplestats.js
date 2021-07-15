@@ -64,7 +64,7 @@ export default function SimpleStats({ posts }) {
                         {filteredBlogPosts.map((frontMatter) => <SimpleStatsPost key={frontMatter.title} {...frontMatter} />)}
                         <br/>
                         <Image
-                            src="/images/stat.gif"
+                            src="/images/data_gif.gif"
                             alt="Photo"
                             width={650}
                             height={600}
