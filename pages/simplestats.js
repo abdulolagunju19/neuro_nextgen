@@ -7,7 +7,8 @@ import {
     Stack,
     Input,
     InputGroup,
-    InputRightElement
+    InputRightElement,
+    Center
 } from '@chakra-ui/react'
 
 import Container from '../components/Container'
@@ -62,20 +63,15 @@ export default function SimpleStats({ posts }) {
                         </InputGroup>
                         {!filteredBlogPosts.length && 'No posts found :('}
                         <br/>
-                        <div 
-                            style={{
-                            display: "flex",
-                            justifyContent: "center",
-                            }}
-                        >
+                        <Center>
                             <Image
                                 src="/images/stat.gif"
                                 alt="Photo"
-                                width={900}
-                                height={900}
+                                width={500}
+                                height={500}
                                 priority
                             />
-                        </div>
+                        </Center>
                         <br/>
                         {filteredBlogPosts.map((frontMatter) => <SimpleStatsPost key={frontMatter.title} {...frontMatter} />)}
                     </Flex>
