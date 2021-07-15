@@ -16,8 +16,8 @@ export const Footer = () => {
         dark: 'gray.700',
     }
     return (
-        <Divider mb={5} mt={5} w='90%' alignSelf="center" />
         <Flex align="center" mb={4} direction="column" visibility={'hidden', 'visible', 'visible'} display={['none', 'flex', 'flex']}>
+            <Divider mb={5} mt={5} w='90%' alignSelf="center" />
             <div>
                 <NextLink href="/blog" passHref>
                     <Link
