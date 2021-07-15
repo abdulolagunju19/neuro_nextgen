@@ -61,6 +61,14 @@ export default function SimpleStats({ posts }) {
                         </InputGroup>
                         {!filteredBlogPosts.length && 'No posts found :('}
                         {filteredBlogPosts.map((frontMatter) => <SimpleStatsPost key={frontMatter.title} {...frontMatter} />)}
+                    <Image
+                    src="/images/stat.gif"
+                    alt="Photo"
+                    width={500}
+                    height={500}
+                    priority
+                    className="next-image"
+                    />
                     </Flex>
                 </Stack>
             </Container>
