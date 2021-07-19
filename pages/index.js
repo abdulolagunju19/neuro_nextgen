@@ -38,8 +38,9 @@ export default function Index() {
           maxWidth="700px"
         >
           <Heading mb={2}>Hi, I'm Abdul-Samad Olagunju</Heading>
-          <Text color={colorSecondary[colorMode]}> Hey, I am a Neuroscience student at the University of Alberta. I enjoy working with Nextjs and crafting beautiful front-end experiences. I want to thank Benjamin Carlson for his personal website tutorial and Michael Hall for inspiring me to make this website. </Text>
+          <Text color={colorSecondary[colorMode]}> Hey, I am a Neuroscience student at the University of Alberta. This is my personal website, where I write about statistics, neuroscience, and display my projects. I created this website because I believe that complicated ideas should be understandable to the general public. </Text>
           <br />
+          <Text color={colorSecondary[colorMode]}> I want to thank Benjamin Carlson for his personal website tutorial and Michael Hall for inspiring me to make this website. </Text>
           <br />
           <Image
             src="/images/westbrook.gif"
