@@ -49,6 +49,8 @@ export default function ContactMe() {
             priority
             className="next-image"
           />
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9142709268483646"
+          crossorigin="anonymous"></script>
         </Flex>
       </Stack>
     </Container>
