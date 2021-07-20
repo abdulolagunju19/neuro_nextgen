@@ -49,6 +49,15 @@ export default function ContactMe() {
             priority
             className="next-image"
           />
+          $("#web-service").load(
+          "https://brainbrowser.cbrain.mcgill.ca/surface-viewer-widget?" + 
+          "version=2.5.2&" + 
+          "model=/models/realct.obj&" + 
+          "color_map=/color_maps/spectral.txt&" + 
+          "intensity_data=/models/realct.txt&" + 
+          "width=400&" + 
+          "height=400"
+          );
         </Flex>
       </Stack>
     </Container>
