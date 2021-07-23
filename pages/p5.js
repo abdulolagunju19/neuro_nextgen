@@ -1,4 +1,17 @@
+const [height, setHeight] = useState(null)
+const [width, setWidth] = useState(null)
+if (process.browser) {
+useEffect(() => setHeight(document.children[0].clientHeight), [
+document.children[0].clientHeight
+])
+useEffect(() => setWidth(document.children[0].clientWidth), [
+document.children[0].clientWidth
+])
+}
+
 import p5 from "p5";
+
+
 
 const sketch = new p5(sketch => {
   sketch.setup = () => {
