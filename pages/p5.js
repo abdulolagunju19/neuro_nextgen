@@ -1,12 +1,12 @@
-const [width, setWidth] = React.useState(0);  
-useEffect(() => {
-    setWidth(window.innerWidth);  
-},[]);
+import { useState, useEffect } from 'react';
 
-const [height, setHeight] = React.useState(0);  
-useEffect(() => {
-    setHeight(window.innerHeight);  
-},[]);
+function getWindowDimensions() {
+  const { innerWidth: width, innerHeight: height } = window;
+  return {
+    width,
+    height
+  };
+}
 
 import React from "react";
 import { render } from "react-dom";
@@ -160,7 +160,7 @@ class App extends React.Component {
     var previous;
 
     p.setup = () => {
-      p.createCanvas(window.innerWidth, window.innerHeight);
+      p.createCanvas(width, height);
       current = p.createVector(0, 0);
       previous = p.createVector(0, 0);
       this.setState({ hue: p.random(this.state.baseHue) });
