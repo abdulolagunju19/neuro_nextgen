@@ -60,9 +60,7 @@ export const Footer = () => {
                             </Link>
                         </Button>
                     </NextLink>
-                </Stack>
-                <Spacer />
-                  <Box>
+                    <Spacer />
                     <Link href="https://twitter.com/" title="Twitter" isExternal>
                     <IconButton
                         aria-label="Twitter"
@@ -83,7 +81,7 @@ export const Footer = () => {
                         _hover={{ backgroundColor: footerHoverBg[colorMode] }}
                     />
                     </Link>
-                  </Box>
+                </Stack>
             </div>
         </Flex>
     )
