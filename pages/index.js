@@ -39,6 +39,7 @@ export default function Index() {
           maxWidth="700px"
         >
           <Heading className="animate__animated animate__fadeInLeft" mb={2}>Hi, I'm Abdul-Samad Olagunju</Heading>
+          <br />
           <Text className="animate__animated animate__fadeInUp animate__delay-2s" color={colorSecondary[colorMode]}> Hey, I am a Neuroscience student at the University of Alberta. This is my personal website, where I write about statistics, neuroscience, and display my projects. I created this website because I believe that complicated ideas should be understandable to the general public. </Text>
           <br />
           <Text className="animate__animated animate__fadeInUp animate__delay-3s" color={colorSecondary[colorMode]}> I want to thank Benjamin Carlson for his personal website tutorial and Michael Hall for inspiring me to make this website. </Text>
