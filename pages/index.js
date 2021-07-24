@@ -44,7 +44,7 @@ export default function Index() {
           <Text className="animate__animated animate__fadeInUp animate__delay-3s" color={colorSecondary[colorMode]}> I want to thank Benjamin Carlson for his personal website tutorial and Michael Hall for inspiring me to make this website. </Text>
           <br />
           <Image
-            className="animate__animated animate__fadeInUp animate__delay-3.5s"
+            className="animate__animated animate__fadeInUp animate__delay-4s"
             src="/images/westbrook.gif"
             alt="Photo"
             width={900}
