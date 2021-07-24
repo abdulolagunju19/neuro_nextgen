@@ -21,7 +21,7 @@ export const Footer = () => {
             <div>
                 <Stack spacing={4} direction="row" align="center">
                     <NextLink href="/blog" passHref>
-                        <Button>
+                        <Button variant="ghost">
                             <Link
                                 fontSize="md"
                                 color="gray.500"
@@ -29,12 +29,12 @@ export const Footer = () => {
                                 mr={2}
                                 title="Blog"
                             >
-                               My Blog 
+                               My Blog Posts
                             </Link>
                         </Button>
                     </NextLink>
                     <NextLink href="/simplestats" passHref>
-                        <Button>
+                        <Button variant="ghost">
                             <Link
                                 fontSize="md"
                                 color="gray.500"
@@ -42,12 +42,12 @@ export const Footer = () => {
                                 mr={2}
                                 title="Simplistic Statistics"
                             >
-                                 Tutorials
+                                 Stats Tutorials
                             </Link>
                         </Button>
                     </NextLink>
                     <NextLink href="/contactme" passHref>
-                        <Button>
+                        <Button variant="ghost">
                             <Link
                                 fontSize="md"
                                 color="gray.500"
