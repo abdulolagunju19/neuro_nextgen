@@ -1,6 +1,6 @@
 import React from 'react'
 import NextLink from 'next/link'
-import { Flex, Link, IconButton, useColorMode } from '@chakra-ui/react'
+import { Flex, Link, IconButton, useColorMode, Stack } from '@chakra-ui/react'
 import { Divider, Box, Button } from "@chakra-ui/react"
 
 
