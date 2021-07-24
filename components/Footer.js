@@ -1,7 +1,8 @@
 import React from 'react'
 import NextLink from 'next/link'
-import { Flex, Link, IconButton, useColorMode, Stack } from '@chakra-ui/react'
+import { Flex, Link, IconButton, useColorMode, Stack, Spacer } from '@chakra-ui/react'
 import { Divider, Box, Button } from "@chakra-ui/react"
+import { FiGithub, FiTwitter, FiLinkedin } from "react-icons/fi"
 
 
 export const Footer = () => {
@@ -60,6 +61,29 @@ export const Footer = () => {
                         </Button>
                     </NextLink>
                 </Stack>
+                <Spacer />
+                  <Box>
+                    <Link href="https://twitter.com/" title="Twitter" isExternal>
+                    <IconButton
+                        aria-label="Twitter"
+                        icon={<FiTwitter />}
+                        size="lg"
+                        color={borderIcon[colorMode]}
+                        variant="ghost"
+                        _hover={{ backgroundColor: footerHoverBg[colorMode] }}
+                    />
+                    </Link>
+                    <Link href="https://github.com/abdulolagunju19" title="GitHub" isExternal>
+                    <IconButton
+                        aria-label="GitHub"
+                        icon={<FiGithub />}
+                        size="lg"
+                        color={borderIcon[colorMode]}
+                        variant="ghost"
+                        _hover={{ backgroundColor: footerHoverBg[colorMode] }}
+                    />
+                    </Link>
+                  </Box>
             </div>
         </Flex>
     )
