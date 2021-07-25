@@ -9,6 +9,7 @@ import {
 } from '@chakra-ui/react'
 
 import Container from '../components/Container'
+import Subscribe from '../components/Subscribe'
 
 export default function ContactMe() {
   const { colorMode } = useColorMode()
@@ -49,6 +50,7 @@ export default function ContactMe() {
             priority
             className="next-image"
           />
+          <Subscribe/>
         </Flex>
       </Stack>
     </Container>
