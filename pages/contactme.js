@@ -39,8 +39,8 @@ export default function ContactMe() {
         >
           <Heading mb={2}>Want to connect further?</Heading>
           <br />
-          <Text color={colorSecondary[colorMode]}> You can reach me at this email address: olagunju@ualberta.ca </Text>
-          <br />
+          <Text color={colorSecondary[colorMode]} fontSize="xl" fontWeight="semibold"> You can reach me at this email address: olagunju@ualberta.ca </Text>
+          <Subscribe/>
           <Image
             src="/images/coolbrain.gif"
             alt="Photo"
@@ -50,7 +50,6 @@ export default function ContactMe() {
             priority
             className="next-image"
           />
-          <Subscribe/>
         </Flex>
       </Stack>
     </Container>
