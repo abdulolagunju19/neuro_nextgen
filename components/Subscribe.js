@@ -65,11 +65,9 @@ export const Subscribe = () => {
                 required
                 type="email"
               />
+              <Button type="submit">{'✨ Subscribe 💌'}</Button>
         </form>
       </FormControl>
-    <div>
-        <Button type="submit">{'✨ Subscribe 💌'}</Button>
-    </div>
   </Stack>
   );
 }
