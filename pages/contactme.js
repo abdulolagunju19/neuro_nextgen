@@ -40,7 +40,8 @@ export default function ContactMe() {
           <Heading mb={2}>Want to connect further?</Heading>
           <Subscribe/>
           <br />
-          <Text color={colorSecondary[colorMode]} fontSize="xl" fontWeight="semibold"> You can reach me at this email address: olagunju@ualberta.ca </Text>
+          <Text color={colorSecondary[colorMode]} fontSize="xl" fontWeight="semibold"> You can also reach me at this email address: olagunju@ualberta.ca </Text>
+          <br/>
           <Image
             src="/images/coolbrain.gif"
             alt="Photo"
