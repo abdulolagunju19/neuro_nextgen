@@ -16,6 +16,7 @@
     "animate.css": "^4.1.1",
     "date-fns": "^2.16.1",
     "framer-motion": "^3.2.1",
+    "formik": "^2.2.9",
     "next": "10.0.5",
     "next-google-fonts": "^1.2.1",
     "next-mdx-remote": "^2.1.3",
