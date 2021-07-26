@@ -78,7 +78,7 @@ export const Subscribe = () => {
                   title: "Account added.",
                   description: "Your email has been added to the subscription list.",
                   status: "success",
-                  duration: 1500,
+                  duration: 3500,
                   isClosable: true,
                 })
                 }
