@@ -60,6 +60,7 @@ export const Subscribe = () => {
           <form onSubmit={subscribe}>
               <FormLabel as="legend">{'Email Address'}</FormLabel>
               <Input
+                variant="filled"
                 id="email-input"
                 name="email"
                 placeholder="you@gmail.com"
