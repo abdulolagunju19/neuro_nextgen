@@ -1,4 +1,22 @@
 import React, { useRef, useState } from 'react';
+import {
+    Input,
+    Stack,
+    InputGroup,
+    Button,
+    Box,
+    useColorMode,
+    Text,
+    Heading,
+    InputRightElement,
+    InputLeftElement,
+    Icon,
+    FormControl,
+    FormLabel,
+    FormErrorMessage,
+    FormHelperText
+} from "@chakra-ui/react"
+ import { Formik } from 'formik';
 
 export const Subscribe = () => {
   // 1. Create a reference to the input so we can fetch/clear it's value.
@@ -35,22 +53,26 @@ export const Subscribe = () => {
   };
 
   return (
-    <form onSubmit={subscribe}>
-      <label htmlFor="email-input">{'Email Address'}</label>
-      <input
-        id="email-input"
-        name="email"
-        placeholder="you@gmail.com"
-        ref={inputEl}
-        required
-        type="email"
-      />
-      <div>
-        {message
-          ? message
-          : `I'll send out new emails when I have a new blog post or statistics tutorial.`}
-      </div>
-      <button type="submit">{'✨ Subscribe 💌'}</button>
-    </form>
+    <Stack spacing={4} direction="row" align="center">
+      <Formik onSubmit={subscribe}>
+        <FormLabel htmlFor="name">Email Address</FormLabel>
+        <Input
+          id="email-input"
+          name="email"
+          placeholder="you@gmail.com"
+          ref={inputEl}
+          required
+          type="email"
+        />
+        <Button 
+          mt={4}
+          colorScheme="teal"
+          isLoading={props.isSubmitting}
+          type="submit"
+        >
+          Subscribe 💌    
+        </Button>
+      </Formik>
+  <Stack/>
   );
 }
