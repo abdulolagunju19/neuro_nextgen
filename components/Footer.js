@@ -81,6 +81,16 @@ export const Footer = () => {
                         _hover={{ backgroundColor: footerHoverBg[colorMode] }}
                     />
                     </Link>
+                    <Link href="https://www.linkedin.com/in/abdul-samad-olagunju-727877167/" title="Linkedin" isExternal>
+                    <IconButton
+                        aria-label="Linkedin"
+                        icon={<FiLinkedin />}
+                        size="lg"
+                        color={borderIcon[colorMode]}
+                        variant="ghost"
+                        _hover={{ backgroundColor: footerHoverBg[colorMode] }}
+                    />
+                    </Link>
                 </Stack>
             </div>
         </Flex>
