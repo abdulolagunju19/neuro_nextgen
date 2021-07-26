@@ -17,6 +17,7 @@ import {
     FormHelperText
 } from "@chakra-ui/react"
  import { Formik } from 'formik';
+import { useToast } from "@chakra-ui/react"
 
 export const Subscribe = () => {
   // 1. Create a reference to the input so we can fetch/clear it's value.
@@ -70,7 +71,18 @@ export const Subscribe = () => {
                 width='full'
               />
               <Box mt='5' width='full'>
-              <Button type="submit">{'✨ Subscribe 💌'}</Button>
+              <Button type="submit"
+                onClick={() =>
+                toast({
+                  title: "Account added.",
+                  description: "Your email has been added to the subscription list.",
+                  status: "success",
+                  duration: 1500,
+                  isClosable: true,
+                })
+                }
+                >{'✨ Subscribe 💌'}
+              </Button>
               </Box>
         </form>
       </FormControl>
