@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 
-function Subscribe() {
+export const Subscribe = () => {
   // 1. Create a reference to the input so we can fetch/clear it's value.
   const inputEl = useRef(null);
   // 2. Hold a message in state to handle the response from our API.
