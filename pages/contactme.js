@@ -38,9 +38,9 @@ export default function ContactMe() {
           maxWidth="700px"
         >
           <Heading mb={2}>Want to connect further?</Heading>
+          <Subscribe/>
           <br />
           <Text color={colorSecondary[colorMode]} fontSize="xl" fontWeight="semibold"> You can reach me at this email address: olagunju@ualberta.ca </Text>
-          <Subscribe/>
           <Image
             src="/images/coolbrain.gif"
             alt="Photo"
