@@ -52,9 +52,8 @@ export const Subscribe = () => {
     
   };
   
-  
+  const toast = useToast()
   return (
-      const toast = useToast()
       <Box mt='10' width='100%' borderRadius="lg" border="2px" borderColor="gray.200" p={8}>
         <Text fontSize="2xl" fontWeight="semibold">Subscribe to get Posts Delivered Right to Your Inbox!</Text>
         <FormControl id="email" isRequired>
