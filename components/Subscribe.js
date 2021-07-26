@@ -52,7 +52,8 @@ export const Subscribe = () => {
     inputEl.current.value = '';
     setMessage('Success! 🎉 You are now subscribed to my posts.');
   };
-
+  const toast = useToast()
+  
   return (
     <Stack spacing={4} direction="row" align="center">
       <Box mt='10' width='full' borderColor="black">
