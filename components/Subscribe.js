@@ -67,7 +67,6 @@ export const Subscribe = () => {
         <Button 
           mt={4}
           colorScheme="teal"
-          isLoading={props.isSubmitting}
           type="submit"
         >
           Subscribe 💌    
