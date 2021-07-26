@@ -67,7 +67,9 @@ export const Subscribe = () => {
               />
         </form>
       </FormControl>
+    <div>
+        <Button type="submit">{'✨ Subscribe 💌'}</Button>
+    </div>
   </Stack>
-  <Button type="submit">{'✨ Subscribe 💌'}</Button>
   );
 }
