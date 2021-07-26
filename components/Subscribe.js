@@ -47,20 +47,14 @@ export const Subscribe = () => {
 
       return;
     }
-    const toast = useToast()
     // 5. Clear the input value and show a success message.
     inputEl.current.value = '';
-    useEffect(() => { toast({
-        title: "Account added.",
-        description: "Your email has been added to the subscription list.",
-        status: "success",
-        duration: 3500,
-        isClosable: true,
-   })}
+    
   };
   
   
   return (
+      const toast = useToast()
       <Box mt='10' width='100%' borderRadius="lg" border="2px" borderColor="gray.200" p={8}>
         <Text fontSize="2xl" fontWeight="semibold">Subscribe to get Posts Delivered Right to Your Inbox!</Text>
         <FormControl id="email" isRequired>
@@ -78,6 +72,15 @@ export const Subscribe = () => {
               />
               <Box mt='5' width='full'>
               <Button type="submit"
+                onClick={() =>
+                toast({
+                  title: "Account added.",
+                  description: "Your email has been added to the subscription list.",
+                  status: "success",
+                  duration: 3500,
+                  isClosable: true,
+                })
+                }
                 >{'✨ Subscribe 💌'}
               </Button>
               </Box>
