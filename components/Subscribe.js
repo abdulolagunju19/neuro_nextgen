@@ -54,25 +54,20 @@ export const Subscribe = () => {
 
   return (
     <Stack spacing={4} direction="row" align="center">
-      <br/>
-      <form onSubmit={subscribe}>
-          <FormLabel as="legend">{'Email Address'}</FormLabel>
-          <Input
-            id="email-input"
-            name="email"
-            placeholder="you@gmail.com"
-            ref={inputEl}
-            required
-            type="email"
-          />
-          <Button type="submit">{'✨ Subscribe 💌'}</Button>
-          <br/>
-          <div>
-          {message
-            ? message
-            : `I'll send out new emails when I have a new blog post or statistics tutorial.`}
-          </div>
-    </form>
+        <FormControl id="email" isRequired>
+          <form onSubmit={subscribe}>
+              <FormLabel as="legend">{'Email Address'}</FormLabel>
+              <Input
+                id="email-input"
+                name="email"
+                placeholder="you@gmail.com"
+                ref={inputEl}
+                required
+                type="email"
+              />
+              <Button type="submit">{'✨ Subscribe 💌'}</Button>
+        </form>
+      </FormControl>
   </Stack>
   );
 }
