@@ -54,24 +54,23 @@ export const Subscribe = () => {
 
   return (
     <Stack spacing={4} direction="row" align="center">
-      <Formik onSubmit={subscribe}>
-        <FormLabel htmlFor="name">Email Address</FormLabel>
-        <Input
-          id="email-input"
-          name="email"
-          placeholder="you@gmail.com"
-          ref={inputEl}
-          required
-          type="email"
-        />
-        <Button 
-          mt={4}
-          colorScheme="teal"
-          type="submit"
-        >
-          Subscribe 💌    
-        </Button>
-      </Formik>
+      <form onSubmit={subscribe}>
+          <label htmlFor="email-input">{'Email Address'}</label>
+          <Input
+            id="email-input"
+            name="email"
+            placeholder="you@gmail.com"
+            ref={inputEl}
+            required
+            type="email"
+          />
+          <div>
+            {message
+              ? message
+              : `I'll send out new emails when I have a new blog post or statistics tutorial.`}
+          </div>
+          <Button type="submit">{'✨ Subscribe 💌'}</Button>
+    </form>
   </Stack>
   );
 }
