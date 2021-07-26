@@ -54,7 +54,7 @@ export const Subscribe = () => {
 
   return (
     <Stack spacing={4} direction="row" align="center">
-      <Box mt='16' width='full'>
+      <Box mt='10' width='full'>
         <FormControl id="email" isRequired>
           <form onSubmit={subscribe}>
               <FormLabel as="legend">{'Email Address'}</FormLabel>
@@ -66,7 +66,9 @@ export const Subscribe = () => {
                 required
                 type="email"
               />
+              <Box mt='5' width='full'>
               <Button type="submit">{'✨ Subscribe 💌'}</Button>
+              </Box>
         </form>
       </FormControl>
     </Box>
