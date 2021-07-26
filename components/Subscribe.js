@@ -55,8 +55,7 @@ export const Subscribe = () => {
   const toast = useToast()
   
   return (
-    <Stack spacing={4} direction="row" align="center">
-      <Box mt='10' width='100%' borderRadius="lg" border="2px" borderColor="gray.200">
+      <Box as="button" mt='10' width='100%' borderRadius="lg" border="2px" borderColor="gray.200">
         <Text fontSize="2xl" fontWeight="semibold">Subscribe to get Posts Delivered Right to Your Inbox!</Text>
         <FormControl id="email" isRequired>
           <form onSubmit={subscribe}>
@@ -88,6 +87,5 @@ export const Subscribe = () => {
         </form>
       </FormControl>
     </Box>
-  </Stack>
   );
 }
