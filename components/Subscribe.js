@@ -73,6 +73,6 @@ export const Subscribe = () => {
           Subscribe 💌    
         </Button>
       </Formik>
-  <Stack/>
+  </Stack>
   );
 }
