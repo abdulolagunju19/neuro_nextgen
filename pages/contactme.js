@@ -9,7 +9,7 @@ import {
 } from '@chakra-ui/react'
 
 import Container from '../components/Container'
-import Subscribe from '../components/Subscribe';
+import { Subscribe } from '../components/Subscribe';
 
 export default function ContactMe() {
   const { colorMode } = useColorMode()
