@@ -56,7 +56,7 @@ export const Subscribe = () => {
   
   return (
     <Stack spacing={4} direction="row" align="center">
-      <Box mt='10' width='full' borderColor="black">
+      <Box mt='10' width='full' borderRadius="lg" border="2px" borderColor="gray.200">
         <Text fontSize="2xl" fontWeight="semibold">Subscribe to get Posts Delivered Right to Your Inbox!</Text>
         <FormControl id="email" isRequired>
           <form onSubmit={subscribe}>
