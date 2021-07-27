@@ -19,7 +19,6 @@ import {
 import { Formik } from 'formik';
 import { useToast } from "@chakra-ui/react"
 
-const toast = useToast()
 export const Subscribe = () => {
   // 1. Create a reference to the input so we can fetch/clear it's value.
   const inputEl = useRef(null);
@@ -59,6 +58,7 @@ export const Subscribe = () => {
     })
   };
   
+  const toast = useToast()
   return (
       <Box mt='10' width='100%' borderRadius="lg" border="2px" borderColor="gray.200" p={8}>
         <Text fontSize="2xl" fontWeight="semibold">Subscribe to get Posts Delivered Right to Your Inbox!</Text>
