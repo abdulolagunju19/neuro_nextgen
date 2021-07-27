@@ -18,7 +18,6 @@ import {
 } from "@chakra-ui/react"
 import { Formik } from 'formik';
 import { useToast } from "@chakra-ui/react"
-import React from 'react';
 import ReactCanvasConfetti from 'react-canvas-confetti';
 
 const canvasStyles = {
