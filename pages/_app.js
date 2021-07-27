@@ -3,6 +3,7 @@ import { ChakraProvider, ColorModeProvider, useColorMode } from '@chakra-ui/reac
 import customTheme from '../styles/theme'
 import { Global, css } from '@emotion/react'
 import { prismLightTheme, prismDarkTheme } from '../styles/prism'
+import SEO from '../next-seo.config';
 
 const GlobalStyle = ({ children }) => {
   const { colorMode } = useColorMode()
@@ -47,6 +48,7 @@ function MyApp({ Component, pageProps }) {
         }}
       >
         <GlobalStyle>
+        <DefaultSeo {...SEO} />
           <Component {...pageProps} />
         </GlobalStyle>
       </ColorModeProvider>
