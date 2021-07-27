@@ -4,6 +4,7 @@ import customTheme from '../styles/theme'
 import { Global, css } from '@emotion/react'
 import { prismLightTheme, prismDarkTheme } from '../styles/prism'
 import SEO from '../next-seo.config';
+import { DefaultSeo } from 'next-seo'
 
 const GlobalStyle = ({ children }) => {
   const { colorMode } = useColorMode()
