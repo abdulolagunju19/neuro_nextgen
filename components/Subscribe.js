@@ -19,6 +19,7 @@ import {
 import { Formik } from 'formik';
 import { useToast } from "@chakra-ui/react"
 
+const toast = useToast()
 export const Subscribe = () => {
   // 1. Create a reference to the input so we can fetch/clear it's value.
   const inputEl = useRef(null);
@@ -49,10 +50,15 @@ export const Subscribe = () => {
     }
     // 5. Clear the input value and show a success message.
     inputEl.current.value = '';
-    
+    toast({
+        title: "Account added.",
+        description: "Your email has been added to the subscription list.",
+        status: "success",
+        duration: 3500,
+        isClosable: true,
+    })
   };
   
-  const toast = useToast()
   return (
       <Box mt='10' width='100%' borderRadius="lg" border="2px" borderColor="gray.200" p={8}>
         <Text fontSize="2xl" fontWeight="semibold">Subscribe to get Posts Delivered Right to Your Inbox!</Text>
@@ -70,17 +76,7 @@ export const Subscribe = () => {
                 width='full'
               />
               <Box mt='5' width='full'>
-              <Button type="submit"
-                onClick={() =>
-                toast({
-                  title: "Account added.",
-                  description: "Your email has been added to the subscription list.",
-                  status: "success",
-                  duration: 3500,
-                  isClosable: true,
-                })
-                }
-                >{'✨ Subscribe 💌'}
+              <Button type="submit">{'✨ Subscribe 💌'}
               </Button>
               </Box>
         </form>
