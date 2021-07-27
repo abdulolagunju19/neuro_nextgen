@@ -79,6 +79,7 @@ export const Subscribe = () => {
                   duration: 3500,
                   isClosable: true,
                 })
+                }
                 >{'✨ Subscribe 💌'}
               </Button>
               </Box>
