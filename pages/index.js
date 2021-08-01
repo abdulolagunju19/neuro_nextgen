@@ -56,9 +56,9 @@ export default function Index() {
           >
             <Heading mb={2}>Hi, I'm Abdul-Samad Olagunju</Heading>
             <br />
-            <Text color={colorSecondary[colorMode]}> Hey, I am a Neuroscience student at the University of Alberta. This is my personal website, where I write about statistics, neuroscience, and display my projects. I created this website because I believe that complicated ideas should be understandable to the general public. </Text>
+            <Text color={colorSecondary[colorMode]}> I'm a Neuroscience student at the University of Alberta. This is my personal website, where I write about statistics, neuroscience, and display my projects. I created this website because I believe that complicated ideas should be understandable to the general public. I want to share everything that I have learned, and I hope that it helps you. </Text>
             <br />
-            <Text color={colorSecondary[colorMode]}> I want to thank Benjamin Carlson for his personal website tutorial and Michael Hall for inspiring me to make this website. </Text>
+            <Text color={colorSecondary[colorMode]}> I want to thank Benjamin Carlson for his personal website tutorial, it helped me get my feet off the ground in web development. </Text>
             <br />
           </motion.div>
           <div className="animate__animated animate__fadeInUp animate__delay-1s">
