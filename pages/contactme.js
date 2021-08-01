@@ -48,8 +48,8 @@ export default function ContactMe() {
         </Flex>
       </Stack>
       <VStack spacing="50px">
-          <h4>Click this to see a cool effect!</h4>
-          <h4>&darr;</h4>
+          <Text fontSize="3xl">Click this to see a cool effect!</Text>
+          <Text fontSize="3xl">&darr;</Text>
           <Box borderRadius="lg" overflow="hidden" p={5} w ="51%" h ="650">
             <iframe width="300%" height="800px" src="https://preview.p5js.org/abdulolagunju19/embed/PYvsqEjBM"></iframe>
           </Box>
