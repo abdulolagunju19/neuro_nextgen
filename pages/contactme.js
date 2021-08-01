@@ -43,18 +43,15 @@ export default function ContactMe() {
           <Subscribe/>
           <br />
           <Text color={colorSecondary[colorMode]} fontSize="xl" fontWeight="semibold"> You can also reach me at this email address: olagunju@ualberta.ca </Text>
-          <br/>
-          <Image
-            src="/images/coolbrain.gif"
-            alt="Photo"
-            justifyContent="center"
-            width={700}
-            height={700}
-            priority
-            className="next-image"
-          />
         </Flex>
       </Stack>
+      <VStack spacing="50px">
+          <h4>Click this to see a cool effect!</h4>
+          <h4>&darr;</h4>
+          <Box borderRadius="lg" overflow="hidden" p={5} w ="51%" h ="650">
+            <iframe width="300%" height="800px" src="https://preview.p5js.org/abdulolagunju19/embed/PYvsqEjBM"></iframe>
+          </Box>
+      </VStack>
     </Container>
   )
 }
