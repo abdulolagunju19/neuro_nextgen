@@ -6,7 +6,9 @@ import {
   Heading,
   Text,
   Flex,
-  Stack
+  Stack,
+  VStack,
+  Box
 } from '@chakra-ui/react'
 
 import Container from '../components/Container'
