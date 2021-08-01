@@ -68,13 +68,6 @@ export default function Blog({ posts }) {
                         {filteredBlogPosts.map((frontMatter) => <BlogPost key={frontMatter.title} {...frontMatter} />)}
                     </Flex>
                 </Stack>
-                <VStack spacing="50px">
-                    <Text>Click this to see a cool effect!</Text>
-                    <Text>&darr;</Text>
-                    <Box borderRadius="lg" overflow="hidden" p={5} w ="51%" h ="650">
-                      <iframe width="300%" height="800px" src="https://preview.p5js.org/abdulolagunju19/embed/PYvsqEjBM"></iframe>
-                    </Box>
-                </VStack>
             </Container>
         </>
     )
