@@ -47,7 +47,7 @@ export default function SimpleStats({ posts }) {
                         alignItems="flex-start"
                         maxWidth="700px"
                         px={4}
-                        className="animate__animated animate__bounceInLeft"
+                        className="animate__animated animate__fadeInLeft"
                     >
                         <Heading letterSpacing="tight" mb={4} as="h1" size="2xl">
                             Statistics Tutorials ({posts.length} posts)
