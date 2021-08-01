@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Head from 'next/head'
 import "animate.css"
+import { NextSeo } from 'next-seo'
 import {
     Heading,
     Flex,
@@ -17,6 +18,10 @@ import SimpleStatsPost from '../components/SimpleStatsPost'
 
 import { SearchIcon } from '@chakra-ui/icons'
 
+const url = 'https://abneuro.vercel.app/simplestats'
+const title = 'Stats Tutorials – Abdul-Samad Olagunju'
+const description = 'In this page, I discuss using python to perform some data analysis.'
+
 export default function SimpleStats({ posts }) {
     const [searchValue, setSearchValue] = useState('')
 
@@ -29,6 +34,16 @@ export default function SimpleStats({ posts }) {
 
     return (
         <>
+            <NextSeo
+              title={title}
+              description={description}
+              canonical={url}
+              openGraph={{
+                url,
+                title,
+                description
+              }}
+            />
             <Head>
                 <title>Simplistic Statistics - Abdul-Samad Olagunju</title>
             </Head>
