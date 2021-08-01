@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Head from 'next/head'
+import "animate.css"
 import {
     Heading,
     Flex,
@@ -46,6 +47,7 @@ export default function SimpleStats({ posts }) {
                         alignItems="flex-start"
                         maxWidth="700px"
                         px={4}
+                        className="animate__animated animate__bounceInLeft"
                     >
                         <Heading letterSpacing="tight" mb={4} as="h1" size="2xl">
                             Statistics Tutorials ({posts.length} posts)
