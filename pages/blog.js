@@ -22,7 +22,7 @@ import { SearchIcon } from '@chakra-ui/icons'
 
 const url = 'https://abneuro.vercel.app/blog'
 const title = 'Blog – Abdul-Samad Olagunju'
-const description = 'Abdul-Samad Olagunju's personal blog. Here, I write about neuroscience, history, and other interesting things.'
+const description = "Abdul-Samad Olagunju's personal blog. Here, I write about neuroscience, history, and other interesting things."
 
 export default function Blog({ posts }) {
     const [searchValue, setSearchValue] = useState('')
