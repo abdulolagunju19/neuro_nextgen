@@ -21,19 +21,6 @@ export const Footer = () => {
             <Divider mb={5} mt={3} w='50%' alignSelf="center" />
             <div>
                 <Stack spacing={4} direction="row" align="center">
-                    <NextLink href="/blog" passHref>
-                        <Button variant="ghost">
-                            <Link
-                                fontSize="md"
-                                color="gray.500"
-                                minWidth="100px"
-                                mr={2}
-                                title="Blog"
-                            >
-                               My Blog Posts
-                            </Link>
-                        </Button>
-                    </NextLink>
                     <NextLink href="/simplestats" passHref>
                         <Button variant="ghost">
                             <Link
@@ -44,6 +31,19 @@ export const Footer = () => {
                                 title="Simplistic Statistics"
                             >
                                  Stats Tutorials
+                            </Link>
+                        </Button>
+                    </NextLink>
+                    <NextLink href="/blog" passHref>
+                        <Button variant="ghost">
+                            <Link
+                                fontSize="md"
+                                color="gray.500"
+                                minWidth="100px"
+                                mr={2}
+                                title="Blog"
+                            >
+                               My Blog Posts
                             </Link>
                         </Button>
                     </NextLink>
