@@ -61,7 +61,7 @@ export default function Index() {
             <Text color={colorSecondary[colorMode]}> I want to thank Benjamin Carlson for his personal website tutorial and Michael Hall for inspiring me to make this website. </Text>
             <br />
           </motion.div>
-          <div className="animate__animated animate__fadeInUp animate__delay-2s">
+          <div className="animate__animated animate__fadeInUp animate__delay-1s">
             <Image
               src="/images/westbrook.gif"
               alt="Photo"
