@@ -37,7 +37,7 @@ export default function ContactMe() {
           justifyContent="flex-start"
           alignItems="flex-start"
           maxWidth="700px"
-          className="animate__animated animate__bounceInLeft"
+          className="animate__animated animate__fadeInLeft"
         >
           <Heading mb={2}>Want to connect further?</Heading>
           <Subscribe/>
