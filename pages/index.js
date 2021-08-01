@@ -38,14 +38,15 @@ export default function Index() {
           justifyContent="flex-start"
           alignItems="flex-start"
           maxWidth="700px"
+          className="animate__animated animate__fadeInLeft"
         >
-          <Heading className="animate__animated animate__fadeInLeft" mb={2}>Hi, I'm Abdul-Samad Olagunju</Heading>
+          <Heading mb={2}>Hi, I'm Abdul-Samad Olagunju</Heading>
           <br />
-          <Text className="animate__animated animate__fadeInLeft" color={colorSecondary[colorMode]}> I'm a Neuroscience student at the University of Alberta. This is my personal website, where I write about statistics, neuroscience, and display my projects. I created this website because I believe that complicated ideas should be understandable to the general public. I want to share everything that I have learned, and I hope that it helps you. </Text>
+          <Text color={colorSecondary[colorMode]}> I'm a Neuroscience student at the University of Alberta. This is my personal website, where I write about statistics, neuroscience, and display my projects. I created this website because I believe that complicated ideas should be understandable to the general public. I want to share everything that I have learned, and I hope that it helps you. </Text>
           <br />
-          <Text className="animate__animated animate__fadeInLeft" color={colorSecondary[colorMode]}> I want to thank Benjamin Carlson for his personal website tutorial, it helped me get my feet off the ground in web development. </Text>
+          <Text color={colorSecondary[colorMode]}> I want to thank Benjamin Carlson for his personal website tutorial, it helped me get my feet off the ground in web development. </Text>
           <br />
-          <div className="animate__animated animate__fadeInUp animate__delay-1s">
+          <div>
             <Image
               src="/images/westbrook.gif"
               alt="Photo"
