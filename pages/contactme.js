@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import "animate.css"
 import {
   useColorMode,
   Heading,
@@ -36,6 +37,7 @@ export default function ContactMe() {
           justifyContent="flex-start"
           alignItems="flex-start"
           maxWidth="700px"
+          className="animate__animated animate__bounceInLeft"
         >
           <Heading mb={2}>Want to connect further?</Heading>
           <Subscribe/>
