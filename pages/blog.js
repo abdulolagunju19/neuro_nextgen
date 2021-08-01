@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Head from 'next/head'
+import { NextSeo } from 'next-seo'
 import "animate.css"
 import {
     Heading,
@@ -19,6 +20,10 @@ import BlogPost from '../components/BlogPost'
 
 import { SearchIcon } from '@chakra-ui/icons'
 
+const url = 'https://abneuro.vercel.app/blog'
+const title = 'Blog – Abdul-Samad Olagunju'
+const description = 'Abdul-Samad Olagunju's personal blog. Here, I write about neuroscience, history, and other interesting things.'
+
 export default function Blog({ posts }) {
     const [searchValue, setSearchValue] = useState('')
 
@@ -31,6 +36,16 @@ export default function Blog({ posts }) {
 
     return (
         <>
+            <NextSeo
+                title={title}
+                description={description}
+                canonical={url}
+                openGraph={{
+                    url,
+                    title,
+                    description
+                }}
+            />
             <Head>
                 <title>Blog - Abdul-Samad Olagunju</title>
             </Head>
