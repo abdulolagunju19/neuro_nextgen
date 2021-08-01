@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import "animate.css"
+import { motion } from "framer-motion";
 import {
   useColorMode,
   Heading,
@@ -38,12 +39,28 @@ export default function Index() {
           alignItems="flex-start"
           maxWidth="700px"
         >
-          <Heading className="animate__animated animate__fadeInLeft" mb={2}>Hi, I'm Abdul-Samad Olagunju</Heading>
-          <br />
-          <Text className="animate__animated animate__fadeInUp animate__delay-1s" color={colorSecondary[colorMode]}> Hey, I am a Neuroscience student at the University of Alberta. This is my personal website, where I write about statistics, neuroscience, and display my projects. I created this website because I believe that complicated ideas should be understandable to the general public. </Text>
-          <br />
-          <Text className="animate__animated animate__fadeInUp animate__delay-2s" color={colorSecondary[colorMode]}> I want to thank Benjamin Carlson for his personal website tutorial and Michael Hall for inspiring me to make this website. </Text>
-          <br />
+          <motion.div
+            className="flex flex-col items-center"
+            initial="pageInitial"
+            animate="pageAnimate"
+            variants={{
+              pageInitial: {
+                opacity: 0,
+                translateX: -800,
+              },
+              pageAnimate: {
+                opacity: 1,
+                translateX: 0,
+              },
+            }}
+          >
+            <Heading mb={2}>Hi, I'm Abdul-Samad Olagunju</Heading>
+            <br />
+            <Text color={colorSecondary[colorMode]}> Hey, I am a Neuroscience student at the University of Alberta. This is my personal website, where I write about statistics, neuroscience, and display my projects. I created this website because I believe that complicated ideas should be understandable to the general public. </Text>
+            <br />
+            <Text color={colorSecondary[colorMode]}> I want to thank Benjamin Carlson for his personal website tutorial and Michael Hall for inspiring me to make this website. </Text>
+            <br />
+          </motion.div>
           <div className="animate__animated animate__fadeInUp animate__delay-2s">
             <Image
               src="/images/westbrook.gif"
