@@ -31,7 +31,6 @@ yarn-error.log*
 .env.production.local
 
 #public files
-public/sitemap.xml
 public/google1fbcf00ae27a5391.html
 
 # vercel
