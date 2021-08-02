@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Head from 'next/head'
 import { parseISO, format } from 'date-fns'
 import {
@@ -21,6 +21,24 @@ export default function BlogLayout({ children, frontMatter }) {
     }
     const router = useRouter()
     const slug = router.asPath.replace('/blog', '')
+    
+    const [width, setWidth] = useState(1)
+    const handleScroll = () => {
+        let scrollTop = window.scrollY;
+        let docHeight = document.body.offsetHeight;
+        let winHeight = window.innerHeight;
+        let scrollPercent = scrollTop / (docHeight - winHeight);
+        let scrollPercentRounded = Math.round(scrollPercent * 100);
+        setWidth(scrollPercentRounded)
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll)
+        }
+    })
+    
     return (
         <Container>
             <Head>
