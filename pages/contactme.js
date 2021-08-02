@@ -15,7 +15,7 @@ import {
 import Container from '../components/Container'
 import { Subscribe } from '../components/Subscribe';
 
-const url = 'https://abneuro.vercel.app/simplestats'
+const url = 'https://abneuro.vercel.app/contactme'
 const title = 'Contact Me – Abdul-Samad Olagunju'
 const description = 'Contact Me if you have any Further Questions.'
 
@@ -63,8 +63,8 @@ export default function ContactMe() {
             <Text color={colorSecondary[colorMode]} fontSize="xl" fontWeight="semibold"> You can also reach me at this email address: olagunju@ualberta.ca </Text>
           </Flex>
         </Stack>
-        <VStack spacing="25px">
-            <Text fontSize="2xl" as="ins">Click the picture to see a cool effect!</Text>
+        <VStack spacing="15px">
+            <Text fontSize="2xl" as="ins">Thanks for visiting my website. As a send off, click the picture below to see a cool effect!</Text>
             <Text fontSize="3xl">&darr;</Text>
             <Box borderRadius="lg" overflow="hidden" p={5} w ="51%" h ="650">
               <iframe width="300%" height="800px" src="https://preview.p5js.org/abdulolagunju19/embed/PYvsqEjBM"></iframe>
