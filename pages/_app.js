@@ -6,9 +6,12 @@ import { prismLightTheme, prismDarkTheme } from '../styles/prism'
 import SEO from '../next-seo.config';
 import { DefaultSeo } from 'next-seo'
 
-import NProgress from "nprogress";
-import { useEffect } from "react";
-import Router from "next/router";
+import Router from 'next/router';
+import NProgress from 'nprogress'; //nprogress module
+import 'nprogress/nprogress.css'; //styles of nprogress
+
+//Binding events. 
+Router.events.on('routeChangeStart', () => NProgress.start()); Router.events.on('routeChangeComplete', () => NProgress.done()); Router.events.on('routeChangeError', () => NProgress.done());  
 
 const GlobalStyle = ({ children }) => {
   const { colorMode } = useColorMode()
@@ -44,22 +47,6 @@ const GlobalStyle = ({ children }) => {
 }
 
 function MyApp({ Component, pageProps }) {
-  useEffect(() => {
-    const delay = 500; // in milliseconds
-    let timer;
-    const load = () => {
-      timer = setTimeout(function () {
-        NProgress.start();
-      }, delay);
-    };
-    const stop = () => {
-      clearTimeout(timer);
-      NProgress.done();
-    };
-    Router.events.on("routeChangeStart", () => load());
-    Router.events.on("routeChangeComplete", () => stop());
-    Router.events.on("routeChangeError", () => stop());
-  }, []);
   return (
     <ChakraProvider resetCSS theme={customTheme}>
       <ColorModeProvider
