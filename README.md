@@ -1,5 +1,6 @@
 # Neuro_Website
-This is my neuro website. It will describe some simple data analysis using python, new and interesting neuroscience papers, and any ideas I come up with in my free time.<br />
+This is my personal website. It will describe some simple data analysis using python, new and interesting neuroscience papers, and any ideas I come up with in my free time.<br />
+
 Enjoy!!!
 <br />
 <br />
