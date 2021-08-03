@@ -44,6 +44,8 @@ export default function BlogLayout({ children, frontMatter }) {
                     maxWidth="700px"
                     w="100%"
                 >
+                    <ReadingProgress targetEl="#target-el" />
+                    <div id="target-el">
                     <Heading letterSpacing="tight" mb={2} as="h1" size="2xl">
                         {frontMatter.title}
                     </Heading>
@@ -73,8 +75,6 @@ export default function BlogLayout({ children, frontMatter }) {
                         </Text>
                     </Flex>
                 </Flex>
-                <ReadingProgress targetEl="#target-el" />
-                <div id="target-el">
                 {children}
                 </div>
             </Stack>
