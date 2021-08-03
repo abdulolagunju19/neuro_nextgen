@@ -9,7 +9,6 @@ import {
     Stack,
     Avatar
 } from '@chakra-ui/react'
-import ReadingProgress from 'react-reading-progress'
 import { useRouter } from 'next/router'
 
 import Container from '../components/Container'
@@ -37,8 +36,6 @@ export default function BlogLayout({ children, frontMatter }) {
                 w="100%"
                 px={2}
             >
-                <ReadingProgress targetEl="#target-el" />
-                <div id="target-el">
                 <Flex
                     flexDirection="column"
                     justifyContent="flex-start"
@@ -76,7 +73,6 @@ export default function BlogLayout({ children, frontMatter }) {
                     </Flex>
                 </Flex>
                 {children}
-                </div>
             </Stack>
         </Container>
     )
