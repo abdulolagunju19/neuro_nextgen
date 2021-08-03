@@ -6,13 +6,13 @@ summary: 'I provide a tutorial on performing t tests and chi square tests on a K
 
 # Tutorials
 
-#### Now, let's see if we can perform some statistical tests on the data.
+### Now, let's see if we can perform some statistical tests on the data.
 
 This is a continuation of my blog post on using python to analyze data. The link to that blog post is here: [Kaggle Data Analysis Blog Post](https://neuro-ver-test-19qnqtrjm-abdulolagunju19.vercel.app/simplestats/KaggleData)
 
 In this blog post, we will be taking a look a code that will perform t tests and chi squared tests on medical insurance data: [Medical Insurance Kaggle](https://www.kaggle.com/mirichoi0218/insurance)
 
-#### Importing our modules
+### Importing our modules
 ```python:stats.py
 #import libraries needed
 import pandas as pd
@@ -30,7 +30,7 @@ df = pd.read_csv("https://raw.githubusercontent.com/abdulolagunju19/csv_files/ma
 ```
 Do you see anything different about the libraries I imported from the other blog post? Yes! I added import ttest_ind to perform my t test and import chi2_contingency so that I can perform my chi squared test.
 
-#### Let's do some t testing
+### Let's do some t testing
 ```python:stats.py
 def Series_stats(var, category, prop1, prop2):
     #think about the null and alternative hypothesis and select alpha = 0.05
@@ -86,7 +86,7 @@ We then show the t statistic and p value. We also check whether our t statistic 
 
 To display my code with variables, I use something called f strings that you may find helpful.
 
-#### The chi squared test
+### The chi squared test
 ```python:stats.py
 def chisquare_stats(category1, category2):
     #frequency table of values 
