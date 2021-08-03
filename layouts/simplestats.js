@@ -55,7 +55,7 @@ export default function SimpleStatsLayout({ children, frontMatter }) {
             <Box h={1} as="div" bgGradient="linear(to-b, blue.200, blue.500)" position="sticky" top={0} zIndex={100} w={`${width}%`}></Box>
             <Container>
                 <Head>
-                    <title>${slug} - Make Statistics Easy - Abdul_Samad Olagunju</title>
+                    <title>{frontMatter.title} - Make Statistics Easy - Abdul_Samad Olagunju</title>
                 </Head>
                 <Stack
                     as="article"
