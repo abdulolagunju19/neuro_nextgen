@@ -11,5 +11,5 @@ Enjoy!!!
  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=abdulolagunju19" />
 </a>
 <a href="https://github.com/abdulolagunju19/github-readme-stats">
-  <img align="center" src="https://github-readme-stats.vercel.app/api?username=anuraghazra&show_icons=true&theme=radical" />
+  <img align="center" src="https://github-readme-stats.vercel.app/api?username=abdulolagunju19&show_icons=true&theme=radical" />
 </a>
