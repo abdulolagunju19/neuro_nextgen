@@ -7,3 +7,4 @@ Enjoy!!!
   <img src="https://media.giphy.com/media/1xOPBBsnLiUt5QD4Mi/giphy.gif" />
 </p>
 
+[![Abdul-Samad Olagunju's GitHub stats](https://github-readme-stats.vercel.app/api?username=abdulolagunju19)](https://github.com/abdulolagunju19/github-readme-stats)
