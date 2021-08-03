@@ -8,7 +8,7 @@ Enjoy!!!
 </p>
 <br />
 <a href="https://github.com/abdulolagunju19/github-readme-stats">
- <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=abdulolagunju19&repo=github-readme-stats" />
+ <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=abdulolagunju19" />
 </a>
 <a href="https://github.com/abdulolagunju19/convoychat">
   <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=abdulolagunju19&repo=convoychat" />
