@@ -10,6 +10,7 @@ import {
     Avatar,
     Box
 } from '@chakra-ui/react'
+import { NextSeo } from 'next-seo'
 import { useRouter } from 'next/router'
 
 import Container from '../components/Container'
@@ -42,6 +43,15 @@ export default function SimpleStatsLayout({ children, frontMatter }) {
     
     return (
         <>
+            <NextSeo
+                title={frontMatter.title}
+                description={frontMatter.summary}
+                openGraph={{
+                title: frontMatter.title,
+                site_name: 'Abdul-Samad Olagunju',
+                description: frontMatter.summary,
+                }}
+            />
             <Box h={1} as="div" bgGradient="linear(to-b, blue.200, blue.500)" position="sticky" top={0} zIndex={100} w={`${width}%`}></Box>
             <Container>
                 <Head>
