@@ -7,7 +7,8 @@ import {
     Text,
     Flex,
     Stack,
-    Avatar
+    Avatar,
+    Box
 } from '@chakra-ui/react'
 import { useRouter } from 'next/router'
 
