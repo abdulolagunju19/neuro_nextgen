@@ -72,19 +72,27 @@ Wow! That is a lot of code. Don't worry, we'll go over what it means. By using d
 
 Into Series_stats, I am feeding these variables(var, category, prop1, prop2). These are variables that my function will use to produce some sort of answer. Think about a function like a machine. I feed this machine a several things: variable(var), category, property1(prop1), and property2(prop2). The machine will spit out a p value, t statistic, and the conclusion of my t test.
 
-In the following code => sample1 =  `df[(df[category]==prop1)][var]`
+In the following code => 
+
+sample1 =  `df[(df[category]==prop1)][var]`
 
 I am getting the first sample for my t test. The dataset I am using is df, and I am choosing a certain subset of data from df. 
 
 For example, category might be equal to smoker, prop1 might be equal to yes, and var might be equal to charges. My first sample is the charges of smokers in the medical insurance dataset. 
 
-In that case, the computer would run the function with => sample1 =  `df[(df["smoker"]=="yes")]["charges"]`
+In that case, the computer would run the function with => 
+
+sample1 =  `df[(df["smoker"]=="yes")]["charges"]`
 
 Then, sample2 would have a category equal to smoker, prop2 would be equal to no, and var would still be equal to charges. My second sample is the charges of non-smokers in the medical insurance dataset. 
 
-In that case, the computer would run the function with => sample2 =  `df[(df["smoker"]=="no")]["charges"]`
+In that case, the computer would run the function with => 
 
-When I write => t, p = ttest_ind(sample1,sample2,equal_var = False)
+sample2 =  `df[(df["smoker"]=="no")]["charges"]`
+
+When I write => 
+
+t, p = ttest_ind(sample1,sample2,equal_var = False)
 
 The function ttest_ind that we imported earlier will perform the t test and crate values for the t statistic and p value. (I'm also not assuming that the populations have equal variance.)
 
