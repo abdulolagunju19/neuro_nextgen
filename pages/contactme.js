@@ -39,7 +39,7 @@ export default function ContactMe() {
         />
       <Container>
         <Head>
-
+          <title>Want to connect further?</title>
         </Head>
         <Stack
           as="main"
