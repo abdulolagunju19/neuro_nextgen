@@ -1,7 +1,7 @@
 import React from 'react'
 import { NextSeo, ArticleJsonLd } from 'next-seo'
 
-const BlogSeo = ({ title, summary, publishedAt, url, image }) => {
+const BlogSeo = ({ title, summary, publishedAt, url, image, frontMatter }) => {
     const date = new Date(publishedAt).toISOString()
 
     return (
