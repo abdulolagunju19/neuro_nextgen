@@ -55,7 +55,7 @@ export default function BlogLayout({ children, frontMatter }) {
             <Box h={1} as="div" bgGradient="linear(to-b, blue.200, blue.500)" position="sticky" top={0} zIndex={100} w={`${width}%`}></Box>
             <Container>
                 <Head>
-                    <title>{frontMatter.title} - Blog - Abdul_Samad Olagunju</title>
+                    <title>{frontMatter.title} - Blog - Abdul-Samad Olagunju</title>
                 </Head>
                 <Stack
                     as="article"
