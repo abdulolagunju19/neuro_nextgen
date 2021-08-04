@@ -13,6 +13,7 @@ import {
 import { NextSeo } from 'next-seo'
 import { useRouter } from 'next/router'
 
+import BlogSeo from '../components/BlogSeo'
 import Container from '../components/Container'
 
 export default function SimpleStatsLayout({ children, frontMatter }) {
@@ -54,6 +55,7 @@ export default function SimpleStatsLayout({ children, frontMatter }) {
             />
             <Box h={1} as="div" bgGradient="linear(to-b, blue.200, blue.500)" position="sticky" top={0} zIndex={100} w={`${width}%`}></Box>
             <Container>
+            <BlogSeo url={`https://abneuro.vercel.app/simplestats${slug}`} {...frontMatter} />
                 <Head>
                     <title>{frontMatter.title} - Make Statistics Easy - Abdul_Samad Olagunju</title>
                 </Head>
