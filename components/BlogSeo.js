@@ -1,13 +1,13 @@
 import React from 'react'
 import { NextSeo, ArticleJsonLd } from 'next-seo'
 
-const BlogSeo = ({ title, summary, publishedAt, url, image, frontMatter }) => {
+const BlogSeo = ({ title, summary, publishedAt, url, image }) => {
     const date = new Date(publishedAt).toISOString()
 
     return (
         <>
             <NextSeo
-                title={frontMatter.title}
+                title={title}
                 description={summary}
                 canonical={url}
                 openGraph={{
