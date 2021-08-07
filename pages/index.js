@@ -13,6 +13,7 @@ import {
 
 import Container from '../components/Container'
 import { NextSeo } from 'next-seo'
+import Typewriter from 'typewriter-effect';
 
 const url = 'https://abneuro.vercel.app/'
 const title = 'Home Page – Abdul-Samad Olagunju'
@@ -57,6 +58,40 @@ export default function Index() {
             className="animate__animated animate__fadeInLeft"
           >
             <Heading mb={2}>Hi, I'm Abdul-Samad Olagunju</Heading>
+            <br />
+            <Flex direction='row'>
+              <Text fontSize={['lg', '2xl']}>I am&nbsp;</Text>
+              <Text
+                as='span'
+                fontSize={['lg', '2xl']}
+                variant='primary'
+                fontWeight='semibold'
+                _hover={{ fontWeight: 'bold' }}
+              >
+                <Typewriter
+                  options={{
+                    delay: 50,
+                    skipAddStyles: true,
+                    loop: true,
+                    deleteSpeed: 20,
+                  }}
+                  onInit={(typewriter) => {
+                    typewriter
+                      .pauseFor(2000)
+                      .typeString('learning about data science.')
+                      .pauseFor(2000)
+                      .deleteChars(28)
+                      .typeString('interested in machine learning.')
+                      .pauseFor(2000)
+                      .deleteChars(31)
+                      .typeString('learning Next.js and React.')
+                      .pauseFor(2000)
+                      .deleteChars(31)
+                      .start();
+                  }}
+                />
+              </Text>
+            </Flex>
             <br />
             <Text color={colorSecondary[colorMode]}> I'm a Neuroscience student at the University of Alberta. This is my personal website, where I write about statistics, neuroscience, and display my projects. I created this website because I believe that complicated ideas should be understandable to the general public. I want to share everything that I have learned, and I hope that it helps you. </Text>
             <br />
