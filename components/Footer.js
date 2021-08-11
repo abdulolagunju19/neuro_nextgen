@@ -22,7 +22,12 @@ export const Footer = () => {
             <div>
                 <Stack spacing={4} direction="row" align="center">
                     <NextLink href="/simplestats" passHref>
-                        <Button variant="ghost">
+                        <Button 
+                            variant="ghost"
+                            transition='all 0.25s'
+                            transitionTimingFunction='spring(1 100 10 10)'
+                            _hover={{ transform: `translateY(-4px)`, shadow: `xl` }}
+                        >
                             <Link
                                 fontSize="md"
                                 color="gray.500"
@@ -35,7 +40,12 @@ export const Footer = () => {
                         </Button>
                     </NextLink>
                     <NextLink href="/blog" passHref>
-                        <Button variant="ghost">
+                        <Button 
+                            variant="ghost"
+                            transition='all 0.25s'
+                            transitionTimingFunction='spring(1 100 10 10)'
+                            _hover={{ transform: `translateY(-4px)`, shadow: `xl` }}
+                        >
                             <Link
                                 fontSize="md"
                                 color="gray.500"
@@ -48,7 +58,12 @@ export const Footer = () => {
                         </Button>
                     </NextLink>
                     <NextLink href="/contactme" passHref>
-                        <Button variant="ghost">
+                        <Button 
+                            variant="ghost"
+                            transition='all 0.25s'
+                            transitionTimingFunction='spring(1 100 10 10)'
+                            _hover={{ transform: `translateY(-4px)`, shadow: `xl` }}
+                        >
                             <Link
                                 fontSize="md"
                                 color="gray.500"
@@ -69,6 +84,9 @@ export const Footer = () => {
                         color={borderIcon[colorMode]}
                         variant="ghost"
                         _hover={{ backgroundColor: footerHoverBg[colorMode] }}
+                        transition='all 0.25s'
+                        transitionTimingFunction='spring(1 100 10 10)'
+                        _hover={{ transform: `translateY(-4px)`, shadow: `xl` }}
                     />
                     </Link>
                     <Link href="https://github.com/abdulolagunju19" title="GitHub" isExternal>
@@ -79,6 +97,9 @@ export const Footer = () => {
                         color={borderIcon[colorMode]}
                         variant="ghost"
                         _hover={{ backgroundColor: footerHoverBg[colorMode] }}
+                        transition='all 0.25s'
+                        transitionTimingFunction='spring(1 100 10 10)'
+                        _hover={{ transform: `translateY(-4px)`, shadow: `xl` }}
                     />
                     </Link>
                     <Link href="https://www.linkedin.com/in/abdul-samad-olagunju-727877167/" title="Linkedin" isExternal>
@@ -89,6 +110,9 @@ export const Footer = () => {
                         color={borderIcon[colorMode]}
                         variant="ghost"
                         _hover={{ backgroundColor: footerHoverBg[colorMode] }}
+                        transition='all 0.25s'
+                        transitionTimingFunction='spring(1 100 10 10)'
+                       _hover={{ transform: `translateY(-4px)`, shadow: `xl` }}
                     />
                     </Link>
                 </Stack>
