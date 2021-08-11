@@ -64,7 +64,15 @@ export default function SimpleStats({ posts }) {
                         px={4}
                         className="animate__animated animate__fadeInLeft"
                     >
-                        <Heading letterSpacing="tight" mb={4} as="h1" size="2xl">
+                        <Heading 
+                            letterSpacing="tight" 
+                            mb={4} 
+                            as="h1" 
+                            size="2xl" 
+                            transition='all 0.25s'
+                            transitionTimingFunction='spring(1 100 10 10)'
+                            _hover={{ transform: `translateY(-4px)`}}
+                        >
                             Statistics Tutorials ({posts.length} posts)
                         </Heading>
                         <InputGroup mb={4} mr={4} w="100%">
