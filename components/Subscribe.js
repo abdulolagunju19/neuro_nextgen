@@ -76,8 +76,14 @@ export const Subscribe = () => {
                 width='full'
               />
               <Box mt='5' width='full'>
-              <Button type="submit">{'✨ Subscribe 💌'}
-              </Button>
+                  <Button 
+                    type="submit"
+                    transition='all 0.25s'
+                    transitionTimingFunction='spring(1 100 10 10)'
+                    _hover={{ transform: `translateY(-4px)`, shadow: `xl` }}
+                  >
+                    {'✨ Subscribe 💌'}
+                  </Button>
               </Box>
         </form>
       </FormControl>
