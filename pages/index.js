@@ -37,21 +37,11 @@ export default function Index() {
             description
           }}
         />
-      <Container>
+      <Container style={{ position: 'relative', overflow: "hidden" }}>
         <Head>
           <title>Home - Abdul-Samad Olagunju</title>
         </Head>
-        <Stack
-          as="main"
-          spacing={8}
-          justifyContent="center"
-          alignItems="flex-start"
-          m="0 auto 4rem auto"
-          maxWidth="700px"
-          px={2}
-          style={{ position: 'relative', overflow: "hidden" }}
-        >
-          <div style={{ position: 'absolute'}}>
+        <div style={{ position: 'absolute'}}>
             <Particles
                   params={{
                     particles: {
@@ -59,13 +49,13 @@ export default function Index() {
                         value: "#000000"
                       },
                       size: {
-                        value: 30,
+                        value: 40,
                         "anim": {
                           "speed": 0.2,
                         }
                       },
                       number: {
-                        "value": 3,
+                        "value": 10,
                         "density": {
                             "enable": false
                         }
@@ -85,7 +75,16 @@ export default function Index() {
                     }
                   }}
                 />
-          </div>
+        </div>
+        <Stack
+          as="main"
+          spacing={8}
+          justifyContent="center"
+          alignItems="flex-start"
+          m="0 auto 4rem auto"
+          maxWidth="700px"
+          px={2}
+        >
           <Flex
             flexDirection="column"
             justifyContent="flex-start"
@@ -101,7 +100,7 @@ export default function Index() {
                         value: "#000000"
                       },
                       size: {
-                        value: 30,
+                        value: 20,
                         "anim": {
                           "speed": 0.2,
                         }
