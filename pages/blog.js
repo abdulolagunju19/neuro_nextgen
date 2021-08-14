@@ -82,6 +82,7 @@ export default function Blog({ posts }) {
                                 aria-label="Search by title"
                                 placeholder="Search by title"
                                 onChange={(e) => setSearchValue(e.target.value)}
+                                variant="filled"
                             />
                             <InputRightElement>
                                 <SearchIcon color="gray.300" />
