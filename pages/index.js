@@ -93,6 +93,41 @@ export default function Index() {
             maxWidth="700px"
             className="animate__animated animate__fadeInLeft"
           >
+            <div style={{ position: 'absolute'}}>
+            <Particles
+                  params={{
+                    particles: {
+                      color: {
+                        value: "#000000"
+                      },
+                      size: {
+                        value: 30,
+                        "anim": {
+                          "speed": 0.2,
+                        }
+                      },
+                      number: {
+                        "value": 2,
+                        "density": {
+                            "enable": false
+                        }
+                    },
+                    "modes": {
+                      "bubble": {
+                          "distance": 250,
+                          "duration": 2,
+                          "size": 0,
+                          "opacity": 1
+                      },
+                      "repulse": {
+                          "distance": 400,
+                          "duration": 4
+                      }
+                    }
+                    }
+                  }}
+                />
+          </div>
             <Heading mb={2}>Hi, I'm Abdul-Samad Olagunju</Heading>
             <br />
             <Flex direction='row'>
@@ -133,6 +168,16 @@ export default function Index() {
             <br />
             <Text color={colorSecondary[colorMode]}> I want to thank Benjamin Carlson for his personal website tutorial, it helped me get my feet off the ground in web development. </Text>
             <br />
+            <div>
+            <Image
+              src="/images/westbrook.gif"
+              alt="Photo"
+              width={900}
+              height={900}
+              priority
+              className="next-image"
+            />
+          </div>
           </Flex>
         </Stack>
       </Container>
