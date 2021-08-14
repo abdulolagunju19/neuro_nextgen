@@ -88,8 +88,8 @@ const Container = ({ children }) => {
                 mt={[4, 8, 8]}
             >
                 {children}
-                <Footer />
             </Flex>
+            <Footer />
         </>
     )
 }
