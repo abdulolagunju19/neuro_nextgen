@@ -133,16 +133,6 @@ export default function Index() {
             <br />
             <Text color={colorSecondary[colorMode]}> I want to thank Benjamin Carlson for his personal website tutorial, it helped me get my feet off the ground in web development. </Text>
             <br />
-            <div>
-              <Image
-                src="/images/westbrook.gif"
-                alt="Photo"
-                width={900}
-                height={900}
-                priority
-                className="next-image"
-              />
-            </div>
           </Flex>
         </Stack>
       </Container>
