@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import "animate.css"
-import { motion } from "framer-motion";
+import Particles from 'react-particles-js';
 import {
   useColorMode,
   Heading,
@@ -49,7 +49,43 @@ export default function Index() {
           m="0 auto 4rem auto"
           maxWidth="700px"
           px={2}
+          style={{ position: 'relative', overflow: "hidden" }}
         >
+          <div style={{ position: 'absolute'}}>
+            <Particles
+                  params={{
+                    particles: {
+                      color: {
+                        value: "#000000"
+                      },
+                      size: {
+                        value: 30,
+                        "anim": {
+                          "speed": 0.2,
+                        }
+                      },
+                      number: {
+                        "value": 3,
+                        "density": {
+                            "enable": false
+                        }
+                    },
+                    "modes": {
+                      "bubble": {
+                          "distance": 250,
+                          "duration": 2,
+                          "size": 0,
+                          "opacity": 1
+                      },
+                      "repulse": {
+                          "distance": 400,
+                          "duration": 4
+                      }
+                    }
+                    }
+                  }}
+                />
+          </div>
           <Flex
             flexDirection="column"
             justifyContent="flex-start"
