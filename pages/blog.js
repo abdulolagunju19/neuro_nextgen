@@ -11,7 +11,8 @@ import {
     InputRightElement,
     VStack,
     Box,
-    Text
+    Text,
+    useColorMode
 } from '@chakra-ui/react'
 
 import Container from '../components/Container'
@@ -33,7 +34,12 @@ export default function Blog({ posts }) {
         )
         .filter((frontMatter) =>
             frontMatter.title.toLowerCase().includes(searchValue.toLowerCase()))
-
+    
+    const { colorMode } = useColorMode()
+    const colorSecondary = {
+        light: 'gray.200',
+        dark: 'gray.700'
+    }   
     return (
         <>
             <NextSeo
@@ -89,7 +95,24 @@ export default function Blog({ posts }) {
                             </InputRightElement>
                         </InputGroup>
                         {!filteredBlogPosts.length && 'No posts found :('}
-                        {filteredBlogPosts.map((frontMatter) => <BlogPost key={frontMatter.title} {...frontMatter} />)}
+                        {filteredBlogPosts.map((frontMatter) =>  
+                            <>
+                                <Box
+                                    p="4"
+                                    boxShadow='xl'
+                                    transition='all 0.25s'
+                                    transitionTimingFunction='spring(1 100 10 10)'
+                                    _hover={{ transform: `translateY(-4px)`, shadow: `xl` }}
+                                    width="100%"
+                                    borderRadius="2xl"
+                                    border='1px solid'
+                                    borderColor={colorSecondary[colorMode]}
+                                >
+                                    <BlogPost key={frontMatter.title} {...frontMatter} />
+                                </Box>
+                                <br/>
+                            </>
+                        )}
                     </Flex>
                 </Stack>
             </Container>
