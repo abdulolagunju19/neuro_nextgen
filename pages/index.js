@@ -14,6 +14,7 @@ import {
 import Container from '../components/Container'
 import { NextSeo } from 'next-seo'
 import Typewriter from 'typewriter-effect';
+import { useMediaQuery } from 'react-responsive'
 
 const url = 'https://abneuro.vercel.app/'
 const title = 'Home Page – Abdul-Samad Olagunju'
@@ -25,6 +26,15 @@ export default function Index() {
     light: 'gray.700',
     dark: 'gray.400'
   }
+  
+  const isDesktopOrLaptop = useMediaQuery({
+    query: '(min-width: 1224px)'
+  })
+  const isBigScreen = useMediaQuery({ query: '(min-width: 1824px)' })
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
+  const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
+  const isRetina = useMediaQuery({ query: '(min-resolution: 2dppx)' })
+  
   return (
     <>
       <NextSeo
@@ -41,41 +51,43 @@ export default function Index() {
         <Head>
           <title>Home - Abdul-Samad Olagunju</title>
         </Head>
-        <div style={{ position: 'absolute'}}>
-            <Particles
-                  params={{
-                    particles: {
-                      color: {
-                        value: "#000000"
-                      },
-                      size: {
-                        value: 40,
-                        "anim": {
-                          "speed": 0.2,
-                        }
-                      },
-                      number: {
-                        "value": 10,
-                        "density": {
-                            "enable": false
-                        }
+        {isDesktopOrLaptop && 
+          <div style={{ position: 'absolute'}}>
+          <Particles
+                params={{
+                  particles: {
+                    color: {
+                      value: "#000000"
                     },
-                    "modes": {
-                      "bubble": {
-                          "distance": 250,
-                          "duration": 2,
-                          "size": 0,
-                          "opacity": 1
-                      },
-                      "repulse": {
-                          "distance": 400,
-                          "duration": 4
+                    size: {
+                      value: 40,
+                      "anim": {
+                        "speed": 0.2,
                       }
+                    },
+                    number: {
+                      "value": 10,
+                      "density": {
+                          "enable": false
+                      }
+                  },
+                  "modes": {
+                    "bubble": {
+                        "distance": 250,
+                        "duration": 2,
+                        "size": 0,
+                        "opacity": 1
+                    },
+                    "repulse": {
+                        "distance": 400,
+                        "duration": 4
                     }
-                    }
-                  }}
-                />
+                  }
+                  }
+                }}
+              />
         </div>
+        }
         <Stack
           as="main"
           spacing={8}
