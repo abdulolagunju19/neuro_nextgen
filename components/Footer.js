@@ -76,7 +76,7 @@ export const Footer = () => {
                         </Button>
                     </NextLink>
                     <Spacer />
-                    <Link href="https://twitter.com/" title="Twitter" isExternal>
+                    <Link href="https://twitter.com/SamadOlagunju" title="Twitter" isExternal>
                     <IconButton
                         aria-label="Twitter"
                         icon={<FiTwitter />}
