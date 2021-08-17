@@ -139,7 +139,7 @@ export default function Index() {
                   }}
                 />
           </div>
-            <Heading mb={2}>Hi, I'm Abdul-Samad Olagunju</Heading>
+            <Heading className="animate__animated animate__flipInY animate__delay-1s" mb={2}>Hi, I'm Abdul-Samad Olagunju<span>👋</span></Heading>
             <br />
             <Flex direction='row'>
               <Text fontSize={['lg', '2xl']}>I am&nbsp;</Text>
