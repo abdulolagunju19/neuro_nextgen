@@ -152,13 +152,13 @@ export default function Index() {
                     value: "#000000"
                   },
                   size: {
-                    value: 40,
+                    value: 30,
                     "anim": {
                       "speed": 0.2,
                     }
                   },
                   number: {
-                    "value": 4,
+                    "value": 3,
                     "density": {
                         "enable": false
                     }
