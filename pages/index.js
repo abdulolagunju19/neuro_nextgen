@@ -92,20 +92,21 @@ export default function Index() {
             description
           }}
         />
-      <Container style={{ position: 'relative', overflow: "hidden" }}>
+      <Container>
+        <div style={{ position: 'relative', overflow: "hidden" }}>
         <Head>
           <title>Home - Abdul-Samad Olagunju</title>
         </Head>
         {isDesktopOrLaptop && 
-          <div style={{ position: 'absolute'}}>
           <Particles
+                style={{ position: 'absolute'}}
                 params={{
                   particles: {
                     color: {
                       value: "#000000"
                     },
                     size: {
-                      value: 40,
+                      value: 50,
                       "anim": {
                         "speed": 0.2,
                       }
@@ -131,8 +132,7 @@ export default function Index() {
                   }
                 }}
               />
-        </div>
-        }
+        } 
         <Stack
           as="main"
           spacing={8}
@@ -141,7 +141,44 @@ export default function Index() {
           m="0 auto 4rem auto"
           maxWidth="700px"
           px={2}
+          style={{ position: 'relative', overflow: "hidden" }}
         >
+          {isTabletOrMobile && 
+            <Particles
+              style={{ position: 'absolute'}}
+              params={{
+                particles: {
+                  color: {
+                    value: "#000000"
+                  },
+                  size: {
+                    value: 40,
+                    "anim": {
+                      "speed": 0.2,
+                    }
+                  },
+                  number: {
+                    "value": 4,
+                    "density": {
+                        "enable": false
+                    }
+                },
+                "modes": {
+                  "bubble": {
+                      "distance": 250,
+                      "duration": 2,
+                      "size": 0,
+                      "opacity": 1
+                  },
+                  "repulse": {
+                      "distance": 400,
+                      "duration": 4
+                  }
+                }
+                }
+              }}
+            />
+          }
           <Flex
             flexDirection="column"
             justifyContent="flex-start"
@@ -150,40 +187,40 @@ export default function Index() {
             className="animate__animated animate__fadeInLeft"
           >
             <div style={{ position: 'absolute'}}>
-            <Particles
-                  params={{
-                    particles: {
-                      color: {
-                        value: "#000000"
-                      },
-                      size: {
-                        value: 20,
-                        "anim": {
-                          "speed": 0.2,
-                        }
-                      },
-                      number: {
-                        "value": 2,
-                        "density": {
-                            "enable": false
-                        }
+              <Particles
+                params={{
+                  particles: {
+                    color: {
+                      value: "#000000"
                     },
-                    "modes": {
-                      "bubble": {
-                          "distance": 250,
-                          "duration": 2,
-                          "size": 0,
-                          "opacity": 1
-                      },
-                      "repulse": {
-                          "distance": 400,
-                          "duration": 4
+                    size: {
+                      value: 20,
+                      "anim": {
+                        "speed": 0.2,
                       }
+                    },
+                    number: {
+                      "value": 2,
+                      "density": {
+                          "enable": false
+                      }
+                  },
+                  "modes": {
+                    "bubble": {
+                        "distance": 250,
+                        "duration": 2,
+                        "size": 0,
+                        "opacity": 1
+                    },
+                    "repulse": {
+                        "distance": 400,
+                        "duration": 4
                     }
-                    }
-                  }}
-                />
-          </div>
+                  }
+                  }
+                }}
+              />
+            </div> 
             <Heading className="animate__animated animate__flipInY animate__delay-1s" mb={2}>Hi, I'm Abdul-Samad Olagunju<Bar><span>👋</span></Bar></Heading>
             <br />
             <Flex direction='row'>
@@ -285,6 +322,7 @@ export default function Index() {
           </TechStack>
           </Flex>
         </Stack>
+        </div>
       </Container>
     </>
   )
