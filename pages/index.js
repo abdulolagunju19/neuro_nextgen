@@ -11,6 +11,7 @@ import {
   Stack
 } from '@chakra-ui/react'
 
+import TechStack from '../components/TechStack'
 import Container from '../components/Container'
 import { NextSeo } from 'next-seo'
 import Typewriter from 'typewriter-effect';
@@ -22,15 +23,21 @@ const title = 'Home Page – Abdul-Samad Olagunju'
 const description = 'The Personal Website of Abdul-Samad Olagunju.'
 
 export default function Index() {
+  
   const { colorMode } = useColorMode()
   const colorSecondary = {
     light: 'gray.700',
     dark: 'gray.400'
   }
+  const iconColor = {
+    light: 'gray.600',
+    dark: 'gray.300'
+  }
   
   const isDesktopOrLaptop = useMediaQuery({
     query: '(min-width: 1224px)'
   })
+  
   const isBigScreen = useMediaQuery({ query: '(min-width: 1824px)' })
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
   const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
@@ -227,6 +234,55 @@ export default function Index() {
               className="next-image"
             />
           </div>
+          <Heading as="h3" size="lg" pt="8" pb="8">
+            My Tech Stack
+          </Heading>
+          <Text color={colorSecondary[colorMode]} pb="5"> The technology I use to develop my applications.</Text>
+          <TechStack
+            title="Vercel"
+            href="https://vercel.com/"
+            src="/images/vercel_icon.jpeg"
+            alt='Vercel Logo'
+            color={iconColor[colorMode]}
+          >
+            Vercel is what I use to deploy my websites.
+          </TechStack>
+          <TechStack
+            title="Next.js"
+            href="https://nextjs.org/"
+            src="/images/nextjs_icon.png"
+            alt='Next.js Logo'
+            color={iconColor[colorMode]}
+          >
+            Next.js is a react framework I use to build my websites.
+          </TechStack>
+          <TechStack
+            title="React"
+            href="https://reactjs.org/"
+            src="/images/react_icon.png"
+            alt='React Logo'
+            color={iconColor[colorMode]}
+          >
+            React is a powerful javascript framework I use to build my websites.
+          </TechStack>
+          <TechStack
+            title="VS Code"
+            href="https://code.visualstudio.com/"
+            src="/images/vscode.png"
+            alt='VS Code Logo'
+            color={iconColor[colorMode]}
+          >
+            My Code Editor that allows me to build my applications.
+          </TechStack>
+          <TechStack
+            title="Chakra UI"
+            href="https://chakra-ui.com/"
+            src="/images/chakra_icon.png"
+            alt='React Logo'
+            color={iconColor[colorMode]}
+          >
+            A simple component library that makes my styling easy.
+          </TechStack>
           </Flex>
         </Stack>
       </Container>
