@@ -11,7 +11,7 @@ import {
 } from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 
-export const TechStack = ({ title, href, children, src, alt }) => {
+const TechStack = ({ title, href, children, src, alt }) => {
     const { colorMode } = useColorMode()
     const borderColor = {
         light: 'gray.200',
