@@ -15,6 +15,7 @@ import Container from '../components/Container'
 import { NextSeo } from 'next-seo'
 import Typewriter from 'typewriter-effect';
 import { useMediaQuery } from 'react-responsive'
+import styled, { keyframes } from 'styled-components'
 
 const url = 'https://abneuro.vercel.app/'
 const title = 'Home Page – Abdul-Samad Olagunju'
@@ -34,6 +35,43 @@ export default function Index() {
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
   const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
   const isRetina = useMediaQuery({ query: '(min-resolution: 2dppx)' })
+  
+  const pulse = keyframes`
+    0% {
+      transform: rotate(0deg);
+    }
+    15% {
+      transform: rotate(14deg);
+    }
+    30% {
+      transform: rotate(-8deg);
+    }
+    40% {
+      transform: rotate(14deg);
+    }
+    50% {
+      transform: rotate(-4deg);
+    }
+    60% {
+      transform: rotate(10deg);
+    }
+    70% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  `
+
+  const Bar = styled.div`
+    cursor: pointer;
+    font-size: 1.5em;
+    animation: ${pulse} 1.2s ease-in-out;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%;
+    display: inline-block;
+  `
   
   return (
     <>
@@ -139,7 +177,7 @@ export default function Index() {
                   }}
                 />
           </div>
-            <Heading className="animate__animated animate__flipInY animate__delay-1s" mb={2}>Hi, I'm Abdul-Samad Olagunju<span>👋</span></Heading>
+            <Heading className="animate__animated animate__flipInY animate__delay-1s" mb={2}>Hi, I'm Abdul-Samad Olagunju<Bar><span>👋</span></Bar></Heading>
             <br />
             <Flex direction='row'>
               <Text fontSize={['lg', '2xl']}>I am&nbsp;</Text>
