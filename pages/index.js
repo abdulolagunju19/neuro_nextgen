@@ -143,7 +143,6 @@ export default function Index() {
           px={2}
           style={{ position: 'relative', overflow: "hidden" }}
         >
-          {isTabletOrMobile && 
             <Particles
               style={{ position: 'absolute'}}
               params={{
@@ -178,7 +177,6 @@ export default function Index() {
                 }
               }}
             />
-          }
           <Flex
             flexDirection="column"
             justifyContent="flex-start"
