@@ -16,6 +16,7 @@
     "@mailchimp/mailchimp_marketing": "^3.0.55",
     "animate.css": "^4.1.1",
     "date-fns": "^2.16.1",
+    "firebase": "^8.10.0",
     "firebase-admin": "^9.11.1",
     "framer-motion": "^3.2.1",
     "formik": "^2.2.9",
