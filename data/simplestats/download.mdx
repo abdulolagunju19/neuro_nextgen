@@ -16,7 +16,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 import json
 import requests
 ```
-So, to complete this task we will be using different libraries. These libraries are selenium, webdrive_manager.chrome, json, and requests. 
+So, to complete this task we will be using different libraries. These libraries are selenium, webdrive_manager.chrome, json, and requests. Yo will have to install selenium and webdriver_manager. I used the Anaconda prompt and pip install. You can use your command prompt or terminal.
 
 With webdriver from selenium, you can interact with a webpage and check how a webpage responds to changes. With ChromeDriverManager from webdriver_manager.chrome, we are telling python we would like to use Google Chrome to download the webpage. With import json, we can access JSON data in order to generate a PDF. With import requests, we can access the webpage we want to download from the URL. 
 ```python:download.py
@@ -42,7 +42,7 @@ def get_driver():
 ```
 Here is the first function we will use. We need to create a variable called chrome_options in order to pass it into our function webdriver.Chrome(). chrome_options will also save the PDF to recentDestinations, which is going to be your downloads folder. 
 
-chrome_options will receive settings and prefs, telling chrome to Save the Webpage as a PDF, and to dump the JSON data into a Python object before it can be moved into the PDF. Why JSON? Usually, data is exchanged between a server (computer that stores the webpage) and your computer. 
+chrome_options will receive settings and prefs, telling chrome to Save the Webpage as a PDF, and to dump the JSON data into a Python object before it can be moved into the PDF. Why JSON? Usually, the data exchanged between a server (computer that stores the webpage) and your computer is a JSON file. 
 
 We return browser, which is going to be able open the chrome browser and execute print. 
 ```python:download.py
@@ -72,7 +72,7 @@ Over here, we define our main function, making sure that the main function is ru
 
 Then we are getting the user to input the URL of the page they want to save as a PDF. 
 
-We use requests to make sure we can access the URL (if the status code of a webpage is 200, that means a connection has been established) and make sure there is no error when we download the article by using a try and except to catch any errors. If we cannot access the URL, we tell the user to enter a valid working URL.
+We use requests to make sure we can access the URL (if the status code of a webpage is 200, that means a connection has been established with the webpage) and make sure there is no error when we download the article by using a try and except to catch any errors. If we cannot access the URL, we tell the user to enter a valid working URL.
 
 Enjoy!
 
