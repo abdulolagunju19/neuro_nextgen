@@ -62,19 +62,19 @@ export default function ContactMe() {
           >
             <Heading mb={2}>Want to connect further?</Heading>
             <Subscribe/>
-            <br />
-            <Button
-              variant="ghost"
-              size="lg"
-              fontSize="20px"
-              onClick={() => router.push('mailto:olagunju@ualberta.ca')}
-            >
-              Get in touch!
-            </Button>
-            <Text color={colorSecondary[colorMode]} fontSize="xl" fontWeight="semibold"> You can also reach me at this email address: olagunju@ualberta.ca </Text>
           </Flex>
         </Stack>
         <VStack spacing="15px" p="4">
+            <Button
+            variant="ghost"
+            size="lg"
+            fontSize="20px"
+            onClick={() => router.push('mailto:olagunju@ualberta.ca')}
+            >
+              Get in touch!
+            </Button>
+            <br />
+            <Text color={colorSecondary[colorMode]} fontSize="xl" fontWeight="semibold"> You can also reach me at this email address: olagunju@ualberta.ca </Text>
             <Text fontSize="2xl">Thanks for visiting my website.</Text>
             <Text fontSize="2xl" as="ins">As a send off, click the picture below to see a cool effect!</Text>
             <Text fontSize="3xl">&darr;</Text>
