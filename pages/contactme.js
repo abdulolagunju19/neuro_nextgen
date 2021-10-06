@@ -9,9 +9,11 @@ import {
   Flex,
   Stack,
   VStack,
-  Box
+  Box,
+  Button
 } from '@chakra-ui/react'
 
+import { useRouter } from 'next/router'
 import Container from '../components/Container'
 import { Subscribe } from '../components/Subscribe';
 
@@ -25,6 +27,7 @@ export default function ContactMe() {
     light: 'gray.700',
     dark: 'gray.400'
   }
+  const router = useRouter()
   return (
     <>
       <NextSeo
@@ -60,6 +63,14 @@ export default function ContactMe() {
             <Heading mb={2}>Want to connect further?</Heading>
             <Subscribe/>
             <br />
+            <Button
+              variant="ghost"
+              size="lg"
+              fontSize="20px"
+              onClick={() => router.push('mailto:olagunju@ualberta.ca')}
+            >
+              Get in touch!
+            </Button>
             <Text color={colorSecondary[colorMode]} fontSize="xl" fontWeight="semibold"> You can also reach me at this email address: olagunju@ualberta.ca </Text>
           </Flex>
         </Stack>
