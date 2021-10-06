@@ -66,7 +66,7 @@ export default function ContactMe() {
         </Stack>
         <VStack spacing="15px" p="4">
             <Button
-            variant="ghost"
+            variant="solid"
             size="lg"
             fontSize="20px"
             onClick={() => router.push('mailto:olagunju@ualberta.ca')}
