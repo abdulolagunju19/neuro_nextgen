@@ -76,11 +76,6 @@ export default function ContactMe() {
             <br />
             <Text color={colorSecondary[colorMode]} fontSize="xl" fontWeight="semibold"> You can also reach me at this email address: olagunju@ualberta.ca </Text>
             <Text fontSize="2xl">Thanks for visiting my website.</Text>
-            <Text fontSize="2xl" as="ins">As a send off, click the picture below to see a cool effect!</Text>
-            <Text fontSize="3xl">&darr;</Text>
-            <Box borderRadius="lg" overflow="hidden" p={5} w ="51%" h ="650">
-              <iframe width="300%" height="800px" src="https://preview.p5js.org/abdulolagunju19/embed/PYvsqEjBM"></iframe>
-            </Box>
         </VStack>
       </Container>
     </>
