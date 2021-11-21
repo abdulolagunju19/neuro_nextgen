@@ -75,7 +75,6 @@ export default function ContactMe() {
             </Button>
             <br />
             <Text color={colorSecondary[colorMode]} fontSize="xl" fontWeight="semibold"> You can also reach me at this email address: olagunju@ualberta.ca </Text>
-            <Text fontSize="2xl">Thanks for visiting my website.</Text>
         </VStack>
       </Container>
     </>
