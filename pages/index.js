@@ -93,7 +93,7 @@ export default function Index() {
           }}
         />
       <Container>
-        <div style={{ position: 'relative', overflow: "hidden" }}>
+        <div style={{ position: 'relative' }}>
         <Head>
           <title>Home - Abdul-Samad Olagunju</title>
         </Head>
