@@ -102,6 +102,15 @@ export default function Index() {
         <Head>
           <title>Home - Abdul-Samad Olagunju</title>
         </Head>
+        <Stack
+          as="main"
+          spacing={8}
+          justifyContent="center"
+          alignItems="flex-start"
+          m="0 auto 4rem auto"
+          maxWidth="700px"
+          px={2}
+        >
           <Flex
             flexDirection="column"
             justifyContent="flex-start"
